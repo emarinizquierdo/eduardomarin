@@ -12,6 +12,10 @@ angular.module('eduardomarinFsApp', [
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
+      .when('/building', {
+        templateUrl: 'partials/building',
+        controller: 'BuildingCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
