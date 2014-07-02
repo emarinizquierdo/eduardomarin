@@ -1,1 +1,362 @@
-<script src="emarin/libs/jquery.tweets.0.1.js" type="text/javascript"></script>
+<nav class="navbar header navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+        	<div class="col-md-3">
+        	</div>
+        	<div class="col-md-4">
+        		<div class="circle photo-profile" ></div>
+        		<h1 class="main-title amatic">Eduardo Marín Izquierdo</h1>
+        	</div>
+		    <div class="col-md-5 navbar-wrapper">
+		        <!-- Collect the nav links, forms, and other content for toggling -->
+		        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		            <ul class="nav navbar-nav header-nav">
+		                <li class="active"><a href="#home">Home</a></li>
+		                <li><a href="#features">Features</a></li>
+		                <li><a href="#security">Security</a></li>
+		                <li><a href="#pricing">Pricing</a></li>
+		                <li><a href="#contact">Contact</a></li>
+		            </ul>
+		            <div class="nav navbar-nav navbar-right header-nav-right navbar-form">
+		                <a href="/Hub/Login"
+		                    class="btn btn-md btn-info">
+		                    Sign In
+		                </a>
+		            </div>
+		        </div><!-- /.navbar-collapse -->
+		    </div>
+		</div>         
+    </div><!-- /.container-->
+</nav>
+
+    <div class="container-fluid">
+    
+
+<div class="row home-hero content" id="home">
+    <div class="col-md-12">
+        <h1>Do you have any idea?</h1>
+        <div class="row form" id="demoGroup">
+        	<div class="col-md-6 col-md-offset-3">
+        		<img class="img-responsive img-center" src="images/idea_01.png">
+        	</div>
+        </div>
+        <h2>Then... I can do it reality!!!</h2>         
+        <div class="row hidden" id="resultsGroup">                       
+            <div class="col-md-6 col-md-offset-3">
+                <div class="row">
+                    <div id="validity" class="col-md-8 col-md-offset-2 panel-box" style="border:none;">
+                        <div class="media">
+                            <a class="pull-left" href="#" onclick="showDetails();">
+                                <span id="indicator"></span>
+                            </a>
+                            <div class="media-body">
+                                <h4 id="status" class="media-heading"></h4>
+                                <p>Sign up today to get detailed validation results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="features" class="row-white row content">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 pricing-header">
+                <img src="images/features.png" class="img-responsive img-center" style="padding-bottom:10px;" />
+                <h1>Features- everyone gets 'em.</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row" style="padding-top:15px;">
+                    <div class="col-md-4 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/mail.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Robust Validation</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    Advanced syntax checks (IETF standards), dea/role account checks, smtp, dns, mailbox checks...a plethora of checks.                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/settings.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Rest API</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Validate email addresses and get back results via our easy-to-use rest API.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 feature-set feature-set-end">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/user-interface.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Intuitive UI</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Not a programmer? Our intuitive UI lets everyone, from novice to expert, get access to their data and reports.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top:25px;">
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/valid.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Simple Pricing</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Nothing is more irritating than complicated pricing. No hidden fees, no sliding scale of charges. 1 flat rate, all the time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/scalable.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Ready to Grow</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Industry newsletter taking off? Suddenly adding 1 million new subscribers? Cloudfish scales to handle your growth so you dont have to.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/roi.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Maximize Your Data</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>It's your data. Realize its full potential by weeding out invalid addresses so you can target who matters.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set feature-set-end">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/safe.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>24/7 Support</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Support staff is on duty 24 hrs a day to make sure you get what you need.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="security" class="row-blue row content security">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 security-header">
+                <img src="images/lock.png" class="img-responsive img-center" style="padding-bottom:10px;" />
+                <h1>Security as a feature, not an afterthought.</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/key.png" style="width: 64px; height: 64px;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">SSL 2048 all the time, every time</h4>
+                        All traffic to and from our website and API is secured using SSL 2048-bit encryption.
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/shield.png" style="width: 64px; height: 64px;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">A+ superstar file security</h4>
+                        All files uploaded to our system are encrypted at rest and sandboxed to prevent accidental or 
+                        unauthorized access by other users or accounts.
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/storage.png" style="width: 64px; height: 64px;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">It's your data - let's keep it that way.</h4>
+                        We do not retain any data after a result set is retrieved from our systems. Any file you upload is retained on our servers only until you download
+                        the validation results. When validating through the UI or programmatically via the API, results are relayed 
+                        in realtime and no data is retained after the callback has completed.                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pricing" class="row-gray row content pricing">
+    <div class="col-md-12 pricing-header">
+        <img src="images/happy.png" class="img-responsive img-center" style="padding-bottom:10px;" />
+        <h1>Simple and affordable pricing.</h1>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><strong>Free</strong> each month</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 feature-set">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="money">10,000</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>API Calls</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 feature-set">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="money">$0.005</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>For each additional call</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 feature-set-end">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="money">Unlimited</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>List uploads</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-info">
+                    Validating 50,000 or more? 
+                    Additional Api calls can be purchased in advance at a discounted rate of $0.002
+                </div>
+            </div>
+        </div>
+        <h1 class="money">No credit card required</h1>
+        <a href="javascript:alert('Sign ups are currently by invite only. Stay tuned!');" class="btn btn-lg btn-warning">
+            Sign Up Today
+        </a>
+    </div>
+</div>
+<div class="row pop-shot">
+    <div class="col-md-6 col-md-offset-3">
+<form action="/Subscribe" class="form" id="notifyMe" method="post">            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                </span>
+                <input type="text" name="email" class="form-control input-lg" placeholder="My Email Address">
+                <span class="input-group-btn">
+                    <button class="btn btn-success btn-lg">Get Updates!</button>
+                </span>
+            </div>
+            <p class="note">We promise not to spam... scouts honor.</p>
+</form>    </div>
+</div>
+
+        
+<div class="row footer content" id="contact">
+    <div class="col-md-3 col-md-offset-2">
+        <a href="http://www.parallelllamas.com">
+            <img src="images/pl_logo_alt.png" class="img-responsive footer-logo" width="225" />
+        </a>
+    </div>
+    <div class="col-md-5 contact">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    Founded in 2014, Bityard Llc is a collective of like-minded designers and developers with a passion for asthetics, usability, and the webs.
+                    Together, we follow our passions and excercise our creativity by building things we hope someone will find useful someday. We also promise to stop when it no longer continues to be fun... or we sell out. Or both.
+                    Currently we collaborate remotely from such common locations as 'Columbus Ohio' and 'Parts Unknown'.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="tech">
+                <ul>
+                    <li>
+                        <a href="http://bizspark.com"><img src="images/biz.png" class="img-responsive" width="100" style="padding:10px;" /></a>
+                    </li>
+                    <li>
+                        <a href="http://mongodb.com"><img src="images/logo-mongodb-header.png" class="img-responsive" width="100" /></a>
+                    </li>
+                    <li>
+                        <a href="http://azure.com"><img src="images/azure.png" class="img-responsive" width="150" style="padding:10px;" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div><!-- /.container-->
