@@ -55,8 +55,17 @@ html, body {
   background-color: rgb(255, 66, 66);
 }
 
+.max-width-100 {
+  max-width: 100px;
+}
 
+.max-width-160 {
+  max-width: 160px;
+}
 
+.max-width-260 {
+  max-width: 260px;
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width:768px) { 
