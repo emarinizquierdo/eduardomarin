@@ -79,13 +79,13 @@ html, body {
     .feature-set-end{    
         border-bottom:none;
     }
-    .home-hero h1, .counter {    
+    .home-hero h1, .home-hero h2, .counter {    
         font-weight: lighter;    
         font-size: 30px;
         font-weight: normal;
         letter-spacing: 2px;
         line-height: 1.1;
-        text-shadow: 0 2px 2px #373e4a;
+        text-shadow: 0 2px 2px #C23131;
     }
     .footer .contact{
         padding:15px;
@@ -113,13 +113,13 @@ html, body {
     .feature-set-end{    
         border-right:none;
     }
-    .home-hero h1, .counter {    
+    .home-hero h1, .home-hero h2, .counter {    
         font-weight: lighter;    
         font-size: 30px;
         font-weight: normal;
         letter-spacing: 2px;
         line-height: 1.1;
-        text-shadow: 0 2px 2px #373e4a;
+        text-shadow: 0 2px 2px #C23131;;
     }
 
     .contact{
@@ -154,13 +154,13 @@ html, body {
         border-right:none;
     }
 
-    .home-hero h1, .counter {    
+    .home-hero h1, .home-hero h2, .counter {    
         font-weight: lighter;    
         font-size: 50px;
         font-weight: normal;
         letter-spacing: 2px;
         line-height: 1.1;
-        text-shadow: 0 2px 2px #C23131;;
+        text-shadow: 0 2px 2px #C23131;
     }
 
     .footer .contact{
@@ -191,7 +191,7 @@ html {
 
 body{    
     background: url(../images/clouds_alt.jpg) no-repeat center center fixed;
-    background-color:#ff4242;    
+    background-color:#48df91;    
     font-family: 'Open Sans','Helvetia Neue',sans-serif;    
 }
 
@@ -305,7 +305,7 @@ body{
 
 .home-hero h2 {   
     font-size: 40px;
-    text-shadow: 0 2px 2px #373e4a;
+    text-shadow: 0 2px 2px #C23131;
 }  
 
 .row-white{
