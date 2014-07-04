@@ -21,4 +21,6 @@ angular.module('eduardomarinFsApp', [
       });
       
     $locationProvider.html5Mode(true);
+  }).run(function($rootScope, Lang){
+    Lang.activeLang = "es_ES";
   });

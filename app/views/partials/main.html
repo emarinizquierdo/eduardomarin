@@ -1,22 +1,404 @@
-  <div class="content-wrapper title_container">
-    <div class="row">
-      <div class="col-xs-12 col-md-3"><div class="circle photo-profile" ></div></div>
-      <div class="col-xs-6 col-md-9"><h1 class="amatic">Eduardo Marín Izquierdo</h1><div>I'm working for a new site. Be patient!! ;-)</div></div>
-    </div>
-  </div>
-
-<div class="footer_site">
-  <div class="content-wrapper">
+<nav id="ha-header" class="ha-header ha-header-large navbar header navbar-fixed-top " role="navigation">
     <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="row">
-          <div class="col-xs-12 col-md-3"><img class="img-responsive" src="http://www.w3.org/html/logo/downloads/HTML5_1Color_White.png"/></div>
-          <div class="col-xs-6 col-md-9"></div>
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-4">
+            <div class="circle photo-profile" ></div>
+            <h1 class="main-title amatic">Eduardo Marín Izquierdo</h1>
+          </div>
+        <div class="col-md-5 navbar-wrapper">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav header-nav">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#features">Skills</a></li>
+                    <li><a href="#security">Projects</a></li>
+                    <li><a href="#pricing">Contact</a></li>
+                    <li><a href="#contact">More info</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </div>         
+    </div><!-- /.container-->
+</nav>
+
+    <div class="container-fluid">
+    
+
+<div class="row home-hero content" id="home">
+    <div class="col-md-12">
+        <h1>{{translate.MAIN.MESSAGE_01}}</h1>
+        <div class="row form" id="demoGroup">
+          <div class="col-md-6 col-md-offset-3">
+            <img class="max-width-260 img-responsive img-center" src="images/light_bulb_medium.png">
+          </div>
+        </div>
+        <h2>{{translate.MAIN.MESSAGE_02}}</h2>         
+    </div>
+</div>
+<div id="features" class="row-white row content ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 pricing-header">
+                <img src="images/tools.png" class="max-width-260 img-responsive img-center" style="padding-bottom:10px;" />
+                <h1>{{translate.SKILLS.MAIN}}</h1>
+            </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-md-3"><img class="img-responsive" src="https://theworkmob.com/static/img/angular-large.png"/></div>
-          <div class="col-xs-6 col-md-9"></div>
-        </div>        
+            <div class="col-md-12">
+                <div class="row" style="padding-top:25px;">
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/html5_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_01}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_01}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/js_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_02}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_02}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/angular_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_03}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_03}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set feature-set-end">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/css3_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_04}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_04}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top:25px;">
+                  <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/bootstrap_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_05}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_05}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/nodejs_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_06}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_06}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/mongodb_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_07}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_07}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/grunt_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_08}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_08}}</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="row" style="padding-top:25px;">
+                  <div class="col-md-3 feature-set feature-set-end">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/yeoman_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_09}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_09}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/bower_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_10}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_10}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/gae_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_11}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_11}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/openshift_shield_color.png" class="img-responsive img-center feature-set-img" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{translate.SKILLS.TITLE_12}}</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>{{translate.SKILLS.DESCRIPTION_12}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
- 
+
+<div id="security" class="row-blue row content security">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 security-header">
+                <img src="images/rocket.png" class="max-width-260 img-responsive img-center" style="padding-bottom:10px;" />
+                <h1>{{translate.PROJECTS.MAIN}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/plus_small.png" style="width: 64px; height: 64px;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{translate.PROJECTS.TITLE_01}}</h4>
+                        {{translate.PROJECTS.DESCRIPTION_01}}
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/plus_small.png" style="width: 64px; height: 64px;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{translate.PROJECTS.TITLE_02}}</h4>
+                        {{translate.PROJECTS.DESCRIPTION_01}}
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/plus_small.png" style="width: 64px; height: 64px;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{translate.PROJECTS.TITLE_03}}</h4>
+                        {{translate.PROJECTS.DESCRIPTION_01}}                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pricing" class="row-gray row content pricing">
+    <div class="col-md-12 pricing-header">
+        <img src="images/coffee.png" class="max-width-260 img-responsive img-center" style="padding-bottom:10px;" />
+        <h1>Do you want to contact me?</h1>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><strong>Lets go!!</strong></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 feature-set pointer" ng-click="goTo(_LINKEDIN)">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/linkedin.png" class="max-width-100 img-responsive img-center feature-set-img" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Linkedin</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 feature-set pointer" ng-click="goTo(_GOOGLEPLUS)">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/google_plus.png" class="max-width-100 img-responsive img-center feature-set-img" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Google Plus</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 feature-set-end pointer" ng-click="goTo(_TWITTER)">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/twitter.png" class="max-width-100 img-responsive img-center feature-set-img" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Twitter</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row pop-shot">
+    <div class="col-md-6 col-md-offset-3">
+<form action="/Subscribe" class="form" id="notifyMe" method="post">            <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                </span>
+                <input type="text" name="email" class="form-control input-lg" placeholder="My Email Address">
+                <span class="input-group-btn">
+                    <button class="btn btn-success btn-lg">Get Updates!</button>
+                </span>
+            </div>
+            <p class="note">We promise not to spam... scouts honor.</p>
+</form>    </div>
+</div>
+
+        
+<div class="row footer content" id="contact">
+    <div class="col-md-3 col-md-offset-2">
+        <a href="http://www.parallelllamas.com">
+            <img src="images/pl_logo_alt.png" class="img-responsive footer-logo" width="225" />
+        </a>
+    </div>
+    <div class="col-md-5 contact">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    I work as web application developer for an important bank company in Spain.
+
+I am very responsible with the product to deliver. It means we have to apply several phases to the application building. We meet with the customer to collect right requirements and talk about diferent soluctions, and to analyze them. We use agile methods (SCRUM) to be sure that the product is following that requirements and we are always under deadline delivery.
+
+About my developer knowledge and experience, javascript is the main programation language I often use to apply in our applications. The product deploy is made over GOOGLE APP ENGINE technologies and we have to know its limitations, API's.
+
+We work with version control (SVN - GIT) and ANGULARJS framework. Now, I am testing with "DIV" widget concept under that tecnology, encapsulating functionality, styles, images and structure in a unique "js" file. I worked with anothers frameworks in the past. IRIS front (expert), JQUERY (expert), kendo, ...
+
+Besides working in main projects, I work in a interesting project to improve our productivity and look for a common develop line in our teams. 
+
+In this way, to enhance the "scaffolding" process or fast prototyping in the other projects I have worked with YEOMAN, GRUNT and BOWER to build diferent FRONT application generators based in ANGULARJS framework. It requires knowledges of NODEJS, and automatic deploy process (minified, concatenate, process, appcache...).
+
+And all of this enyoing my work and the people I share it. ;-)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div><!-- /.container-->
