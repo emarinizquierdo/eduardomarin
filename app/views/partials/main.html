@@ -1,22 +1,22 @@
-<nav id="ha-header" class="ha-header ha-header-large navbar header navbar-fixed-top " role="navigation">
+<nav id="ha-header" class="neucha ha-header to-up navbar header navbar-fixed-top " role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-2">
           </div>
-          <div class="col-md-4">
+          <div class="col-sm-7 col-md-5">
             <div class="circle photo-profile" ></div>
-            <h1 class="main-title amatic">Eduardo Marín Izquierdo</h1>
+            <h1 class="main-title neucha">Eduardo Marín Izquierdo</h1>
           </div>
-        <div class="col-md-5 navbar-wrapper">
+        <div class="col-sm-5 col-md-5 navbar-wrapper">
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav header-nav">
-                    <li class="active"><a href="#home">Home</a></li>
-                    <li><a href="#features">Skills</a></li>
-                    <li><a href="#security">Projects</a></li>
-                    <li><a href="#pricing">Contact</a></li>
-                    <li><a href="#contact">More info</a></li>
+                    <li class="active"><a href="/home">Home</a></li>
+                    <li><a href>Skills</a></li>
+                    <li><a href>Projects</a></li>
+                    <li><a href>Contact</a></li>
+                    <li><a href>More info</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
@@ -24,21 +24,21 @@
     </div><!-- /.container-->
 </nav>
 
-    <div class="container-fluid">
+<div class="container-fluid neucha">
     
 
 <div class="row home-hero content" id="home">
     <div class="col-md-12">
-        <h1>{{translate.MAIN.MESSAGE_01}}</h1>
+        <h1 class="main-message">{{translate.MAIN.MESSAGE_01}}</h1>
         <div class="row form" id="demoGroup">
           <div class="col-md-6 col-md-offset-3">
-            <img class="max-width-260 img-responsive img-center" src="images/light_bulb_medium.png">
+            <div class="circle photo-main" ></div>
           </div>
         </div>
         <h2>{{translate.MAIN.MESSAGE_02}}</h2>         
     </div>
 </div>
-<div id="features" class="row-white row content ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
+<div id="features" class="row-white row content">
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-12 pricing-header">
@@ -46,7 +46,7 @@
                 <h1>{{translate.SKILLS.MAIN}}</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row ha-waypoint" data-animate-down="to-down" data-animate-up="to-up">
             <div class="col-md-12">
                 <div class="row" style="padding-top:25px;">
                     <div class="col-md-3 feature-set">
