@@ -12,11 +12,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav header-nav">
-                    <li class="active"><a href="/home">Home</a></li>
-                    <li><a href>Skills</a></li>
-                    <li><a href>Projects</a></li>
-                    <li><a href>Contact</a></li>
-                    <li><a href>More info</a></li>
+                    <li class="active"><a href scroll-on-click sc-target="#home">Home</a></li>
+                    <li><a href scroll-on-click sc-target="#skills">Skills</a></li>
+                    <li><a href scroll-on-click sc-target="#projects">Projects</a></li>
+                    <li><a href scroll-on-click sc-target="#contact">Contact</a></li>
+                    <li><a href scroll-on-click sc-target="#more-info">More info</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
@@ -24,10 +24,10 @@
     </div><!-- /.container-->
 </nav>
 
-<div class="container-fluid neucha">
+<div class="container-fluid neucha" id="home">
     
 
-<div class="row home-hero content" id="home">
+<div class="row home-hero content" >
     <div class="col-md-12">
         <h1 class="main-message">{{translate.MAIN.MESSAGE_01}}</h1>
         <div class="row form" id="demoGroup">
@@ -38,21 +38,21 @@
         <h2>{{translate.MAIN.MESSAGE_02}}</h2>         
     </div>
 </div>
-<div id="features" class="row-white row content">
+<div id="skills" class="row-white row content">
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-12 pricing-header">
-                <img src="images/tools.png" class="max-width-260 img-responsive img-center" style="padding-bottom:10px;" />
+                <img src="images/tools.png" class="rotating max-width-260 img-responsive img-center" style="padding-bottom:10px;" />
                 <h1>{{translate.SKILLS.MAIN}}</h1>
             </div>
         </div>
         <div class="row ha-waypoint" data-animate-down="to-down" data-animate-up="to-up">
             <div class="col-md-12">
                 <div class="row" style="padding-top:25px;">
-                    <div class="col-md-3 feature-set">
+                    <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/html5_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/html5_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -66,10 +66,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 feature-set">
+                    <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/js_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/js_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -83,10 +83,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 feature-set">
+                    <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/angular_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/angular_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -100,10 +100,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 feature-set feature-set-end">
+                    <div class="col-md-3 contact-set contact-set-end">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/css3_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/css3_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -119,10 +119,10 @@
                     </div>
                 </div>
                 <div class="row" style="padding-top:25px;">
-                  <div class="col-md-3 feature-set">
+                  <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/bootstrap_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/bootstrap_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -136,10 +136,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 feature-set">
+                    <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/nodejs_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/nodejs_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -153,10 +153,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 feature-set">
+                    <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/mongodb_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/mongodb_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -170,10 +170,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 feature-set">
+                    <div class="col-md-3 contact-set contact-set-end">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/grunt_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/grunt_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -189,10 +189,10 @@
                     </div>                    
                 </div>
                 <div class="row" style="padding-top:25px;">
-                  <div class="col-md-3 feature-set feature-set-end">
+                  <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/yeoman_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/yeoman_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -206,10 +206,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 feature-set">
+                    <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/bower_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/bower_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -223,10 +223,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 feature-set">
+                    <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/gae_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/gae_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -240,10 +240,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 feature-set">
+                    <div class="col-md-3 contact-set contact-set-end">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/openshift_shield_color.png" class="img-responsive img-center feature-set-img" />
+                                <img src="images/openshift_shield_color.png" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
@@ -263,17 +263,17 @@
     </div>
 </div>
 
-<div id="security" class="row-blue row content security">
+<div id="projects" class="row-blue row content projects">
     <div class="col-md-12">
         <div class="row">
-            <div class="col-md-12 security-header">
-                <img src="images/rocket.png" class="max-width-260 img-responsive img-center" style="padding-bottom:10px;" />
+            <div class="col-md-12 projects-header">
+                <img src="images/rocket.png" class="shake max-width-260 img-responsive img-center" style="padding-bottom:10px;" />
                 <h1>{{translate.PROJECTS.MAIN}}</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <div class="media">
+                <div class="media pointer" ng-click="goTo(_DUBIDUBA)">
                     <a class="pull-left" href="#">
                         <img class="media-object" src="images/plus_small.png" style="width: 64px; height: 64px;">
                     </a>
@@ -282,22 +282,31 @@
                         {{translate.PROJECTS.DESCRIPTION_01}}
                     </div>
                 </div>
-                <div class="media">
+                <div class="media pointer" ng-click="goTo(_GEKO)">
                     <a class="pull-left" href="#">
                         <img class="media-object" src="images/plus_small.png" style="width: 64px; height: 64px;">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">{{translate.PROJECTS.TITLE_02}}</h4>
-                        {{translate.PROJECTS.DESCRIPTION_01}}
+                        {{translate.PROJECTS.DESCRIPTION_02}}
                     </div>
                 </div>
-                <div class="media">
+                <div class="media pointer" ng-click="goTo(_BOOKING)">
                     <a class="pull-left" href="#">
                         <img class="media-object" src="images/plus_small.png" style="width: 64px; height: 64px;">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">{{translate.PROJECTS.TITLE_03}}</h4>
-                        {{translate.PROJECTS.DESCRIPTION_01}}                        
+                        {{translate.PROJECTS.DESCRIPTION_03}}                        
+                    </div>
+                </div>
+                <div class="media pointer">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/plus_small.png" style="width: 64px; height: 64px;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{translate.PROJECTS.TITLE_04}}</h4>
+                        {{translate.PROJECTS.DESCRIPTION_04}}                        
                     </div>
                 </div>
             </div>
@@ -305,22 +314,22 @@
     </div>
 </div>
 
-<div id="pricing" class="row-gray row content pricing">
+<div id="contact" class="row-gray row content pricing">
     <div class="col-md-12 pricing-header">
         <img src="images/coffee.png" class="max-width-260 img-responsive img-center" style="padding-bottom:10px;" />
-        <h1>Do you want to contact me?</h1>
+        <h1>{{translate.CONTACT.CONTACTME}}</h1>
     </div>
     <div class="col-md-8 col-md-offset-2">
         <div class="row">
             <div class="col-md-12">
-                <h1><strong>Lets go!!</strong></h1>
+                <h1><strong>{{translate.CONTACT.LETSGO}}</strong></h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 feature-set pointer" ng-click="goTo(_LINKEDIN)">
+            <div class="col-md-4 contact-set pointer" ng-click="goTo(_LINKEDIN)">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src="images/linkedin.png" class="max-width-100 img-responsive img-center feature-set-img" />
+                        <img src="images/linkedin.png" class="max-width-100 img-responsive img-center contact-set-img" />
                     </div>
                 </div>
                 <div class="row">
@@ -329,10 +338,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 feature-set pointer" ng-click="goTo(_GOOGLEPLUS)">
+            <div class="col-md-4 contact-set pointer" ng-click="goTo(_GOOGLEPLUS)">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src="images/google_plus.png" class="max-width-100 img-responsive img-center feature-set-img" />
+                        <img src="images/google_plus.png" class="max-width-100 img-responsive img-center contact-set-img" />
                     </div>
                 </div>
                 <div class="row">
@@ -341,10 +350,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 feature-set-end pointer" ng-click="goTo(_TWITTER)">
+            <div class="col-md-4 contact-set-end pointer" ng-click="goTo(_TWITTER)">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src="images/twitter.png" class="max-width-100 img-responsive img-center feature-set-img" />
+                        <img src="images/twitter.png" class="max-width-100 img-responsive img-center contact-set-img" />
                     </div>
                 </div>
                 <div class="row">
@@ -356,49 +365,41 @@
         </div>
     </div>
 </div>
-<div class="row pop-shot">
-    <div class="col-md-6 col-md-offset-3">
-<form action="/Subscribe" class="form" id="notifyMe" method="post">            <div class="input-group">
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-envelope"></span>
-                </span>
-                <input type="text" name="email" class="form-control input-lg" placeholder="My Email Address">
-                <span class="input-group-btn">
-                    <button class="btn btn-success btn-lg">Get Updates!</button>
-                </span>
-            </div>
-            <p class="note">We promise not to spam... scouts honor.</p>
-</form>    </div>
-</div>
-
         
-<div class="row footer content" id="contact">
+<div class="row footer content" id="more-info">
     <div class="col-md-3 col-md-offset-2">
         <a href="http://www.parallelllamas.com">
-            <img src="images/pl_logo_alt.png" class="img-responsive footer-logo" width="225" />
+            <div class="square photo-profile-cv" ></div>
         </a>
     </div>
     <div class="col-md-5 contact">
         <div class="row">
             <div class="col-md-12">
-                <p>
-                    I work as web application developer for an important bank company in Spain.
-
-I am very responsible with the product to deliver. It means we have to apply several phases to the application building. We meet with the customer to collect right requirements and talk about diferent soluctions, and to analyze them. We use agile methods (SCRUM) to be sure that the product is following that requirements and we are always under deadline delivery.
-
-About my developer knowledge and experience, javascript is the main programation language I often use to apply in our applications. The product deploy is made over GOOGLE APP ENGINE technologies and we have to know its limitations, API's.
-
-We work with version control (SVN - GIT) and ANGULARJS framework. Now, I am testing with "DIV" widget concept under that tecnology, encapsulating functionality, styles, images and structure in a unique "js" file. I worked with anothers frameworks in the past. IRIS front (expert), JQUERY (expert), kendo, ...
-
-Besides working in main projects, I work in a interesting project to improve our productivity and look for a common develop line in our teams. 
-
-In this way, to enhance the "scaffolding" process or fast prototyping in the other projects I have worked with YEOMAN, GRUNT and BOWER to build diferent FRONT application generators based in ANGULARJS framework. It requires knowledges of NODEJS, and automatic deploy process (minified, concatenate, process, appcache...).
-
-And all of this enyoing my work and the people I share it. ;-)
-                </p>
+                <p ng-bind-html="translate.CURRICULUM.BODY"></p>
             </div>
         </div>
     </div>
 </div>
-
-    </div><!-- /.container-->
+<div class="row pop-shot">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 projects">
+            <h3>{{translate.FOOTER.QUESTION}}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form action="/Subscribe" class="form" id="notifyMe" method="post">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    </span>
+                    <input type="text" name="email" class="form-control input-lg" placeholder="Mi e-mail">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success btn-lg">Envíamelo!</button>
+                    </span>
+                </div>
+                <p class="note">{{translate.FOOTER.NOWORRY}}</p>
+            </form>
+        </div>
+    </div>
+</div><!-- /.container-->

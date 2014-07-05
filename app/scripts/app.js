@@ -6,21 +6,19 @@ angular.module('eduardomarinFsApp', [
   'ngSanitize',
   'ngRoute'
 ])
-  .config(function ($routeProvider, $locationProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'partials/main',
-        controller: 'MainCtrl'
-      })
-      .when('/building', {
-        templateUrl: 'partials/building',
-        controller: 'BuildingCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-      
-    $locationProvider.html5Mode(true);
-  }).run(function($rootScope, Lang){
-    Lang.activeLang = "es_ES";
-  });
+.config(function ($routeProvider, $locationProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'partials/main',
+      controller: 'MainCtrl'
+    })
+    .when('/building', {
+      templateUrl: 'partials/building',
+      controller: 'BuildingCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+    
+  $locationProvider.html5Mode(true);
+});
