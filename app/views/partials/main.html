@@ -368,14 +368,36 @@
         
 <div class="row footer content" id="more-info">
     <div class="col-md-3 col-md-offset-2">
-        <a href="http://www.parallelllamas.com">
-            <div class="square photo-profile-cv" ></div>
-        </a>
+        <div class="square photo-profile-cv" ></div>
     </div>
     <div class="col-md-5 contact">
         <div class="row">
             <div class="col-md-12">
-                <p ng-bind-html="translate.CURRICULUM.BODY"></p>
+                <h2>{{translate.CURRICULUM.EXPERIENCE}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{{translate.CURRICULUM.EXPERIENCE_01}}</h3>
+                <h4>{{translate.CURRICULUM.EXPERIENCE_DESCRIPTION_01}}</h4>
+                <h5>{{translate.CURRICULUM.EXPERIENCE_DATE_01}}</h5>
+                <p ng-bind-html="translate.CURRICULUM.DESCRIPTION_01"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{{translate.CURRICULUM.EXPERIENCE_02}}</h3>
+                <h4>{{translate.CURRICULUM.EXPERIENCE_DESCRIPTION_02}}</h4>
+                <h5>{{translate.CURRICULUM.EXPERIENCE_DATE_02}}</h5>
+                <p ng-bind-html="translate.CURRICULUM.DESCRIPTION_02"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{{translate.CURRICULUM.EXPERIENCE_03}}</h3>
+                <h4>{{translate.CURRICULUM.EXPERIENCE_DESCRIPTION_03}}</h4>
+                <h5>{{translate.CURRICULUM.EXPERIENCE_DATE_03}}</h5>
+                <p ng-bind-html="translate.CURRICULUM.DESCRIPTION_03"></p>
             </div>
         </div>
     </div>
@@ -393,9 +415,9 @@
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-envelope"></span>
                     </span>
-                    <input type="text" name="email" class="form-control input-lg" placeholder="Mi e-mail">
+                    <input type="text" name="email" class="form-control input-lg" placeholder="Mi e-mail" disabled="disabled">
                     <span class="input-group-btn">
-                        <button class="btn btn-success btn-lg">Envíamelo!</button>
+                        <button class="btn btn-success btn-lg" disabled="disabled">Envíamelo!</button>
                     </span>
                 </div>
                 <p class="note">{{translate.FOOTER.NOWORRY}}</p>
