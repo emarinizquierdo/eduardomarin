@@ -5,7 +5,6 @@ angular.module('eduardomarinFsApp')
     
     // Get currentUser from cookie
     $rootScope.currentUser = $cookieStore.get('user') || null;
-    $cookieStore.remove('user');
 
     return {
 
@@ -24,6 +23,7 @@ angular.module('eduardomarinFsApp')
           password: user.password
         }, function(user) {
           $rootScope.currentUser = user;
+          $cookieStore.set('user', user);
           return cb();
         }, function(err) {
           return cb(err);
@@ -41,7 +41,7 @@ angular.module('eduardomarinFsApp')
 
         return Session.delete(function() {
             $rootScope.currentUser = null;
-            //OAuth.clearCache('flickr');
+            $cookieStore.remove('user');
             return cb();
           },
           function(err) {

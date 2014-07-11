@@ -4,7 +4,8 @@ angular.module('eduardomarinFsApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'textAngular'
 ])
 .config(function ($routeProvider, $locationProvider, $httpProvider) {
   $routeProvider
@@ -23,6 +24,11 @@ angular.module('eduardomarinFsApp', [
     .when('/blog', {
       templateUrl: 'partials/blog',
       controller: 'BlogCtrl'
+    })
+    .when('/admin', {
+      templateUrl: 'partials/admin',
+      controller: 'AdminCtrl',
+      authenticate: true
     })
     .otherwise({
       redirectTo: '/'
