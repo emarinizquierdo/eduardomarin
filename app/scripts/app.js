@@ -30,6 +30,10 @@ angular.module('eduardomarinFsApp', [
       controller: 'AdminCtrl',
       authenticate: true
     })
+    .when('/entry/:id', {
+      templateUrl: 'partials/entry',
+      controller: 'EntryCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });

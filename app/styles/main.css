@@ -389,6 +389,19 @@ body{
   padding-top: 160px;
 }
 
+.another-container {
+  padding-top: 60px;
+}
+
+.another-container .container {
+  padding-top: 35px;
+}
+
+.small-post {
+  max-height: 170px;
+  overflow: hidden;
+}
+
 .navbar-header {
   width: 100%;
 }

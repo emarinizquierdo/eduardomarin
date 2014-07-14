@@ -1,33 +1,22 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-  .controller('BlogCtrl', function ($rootScope, $scope, $location, $http, Auth, Post) {
+.controller('EntryCtrl', function ($scope, $http, $routeParams, Post) {
     
-    $scope.posts = [];
     $scope.postData = null;
-    $scope.isAdmin = Auth.isAdminLoggedIn();
 
     function _LoadPost(){
-        $http.get('/api/post/').success(function(data) {
-       		
-       		$scope.posts = data.data;
+    	if($routeParams.id){
 
-        }).error(function(error){
-            
-        });
-    }
+	        Post.get({ id : $routeParams.id }, function(data) {
+	       		
+	       		$scope.postData = data;
 
-    $scope.savePost = function(p_data){
-
-        Post.create(p_data, function(){
-        	_LoadPost();
-        }); 
-        
-    }
-
-    $scope.goTo = function( p_entry ){
-    	$location.path("/entry/" + p_entry);
-    }
+	        },function(error){
+	            
+	        });
+	    }
+    };
 
     var   $haHeader = $( '.ha-header' )
 		, $mainTitle = $( '.main-title' )
@@ -61,4 +50,4 @@ angular.module('eduardomarinFsApp')
 
     _LoadPost();
 
-  });
+});
