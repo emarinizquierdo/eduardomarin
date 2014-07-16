@@ -4,19 +4,22 @@
         <div class="row">
           <div class="col-md-2">
           </div>
-          <div class="col-sm-7 col-md-5">
+          <div class="col-sm-12 col-md-5">
             <div class="circle photo-profile" ></div>
             <h1 class="main-title neucha">Eduardo Marín Izquierdo</h1>
+            <span class="glyphicon glyphicon-align-justify pull-right menu-icon" ng-click="toggleCollapse = !toggleCollapse"></span>
           </div>
+          <div>
         <div class="col-sm-5 col-md-5 navbar-wrapper">
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div ng-class="{'collapse' : !toggleCollapse}" class="navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav header-nav">
                     <li class="active"><a href scroll-on-click sc-target="#home">Home</a></li>
-                    <li><a href scroll-on-click sc-target="#skills">Skills</a></li>
+                    <li><a href="/" scroll-on-click sc-target="#skills">Skills</a></li>
                     <li><a href scroll-on-click sc-target="#projects">Projects</a></li>
                     <li><a href scroll-on-click sc-target="#contact">Contact</a></li>
                     <li><a href scroll-on-click sc-target="#more-info">More info</a></li>
+                    <li><a href="/blog">Blog</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>

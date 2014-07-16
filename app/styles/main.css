@@ -169,6 +169,15 @@ body{
   height: 112px;
 }
 
+.menu-icon {
+  display: block;
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
 .photo-profile-cv {
   background-image: url('/images/edu.jpg');
   height: 225px;
@@ -240,7 +249,7 @@ body{
 
 
 /* Small devices (tablets, 768px and up) */
-@media (max-width:768px) {
+@media (max-width:767px) {
 
     .main-title,
     .main-title.to-up {
@@ -286,6 +295,11 @@ body{
         color:#fff;
         padding:0px;
     }
+
+    .menu-icon {
+      display: block;
+      top: 0px;
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -302,6 +316,24 @@ body{
 
     .photo-profile.to-down {
       left: 60px;
+    }
+
+    .navbar-collapse.collapse {
+      display: none !important;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .navbar-collapse {
+      max-height: 340px;
+      padding-right: 15px;
+      padding-left: 15px;
+      overflow-x: visible;
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      -webkit-overflow-scrolling: touch;
     }
 
 }
@@ -342,6 +374,13 @@ body{
     }
 }
 
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .menu-icon {
+      display: none;
+    }
+}
+
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {    
     .content {
@@ -378,6 +417,7 @@ body{
         height:600px;
         padding:0px;
     }
+
 }
 
 
@@ -400,6 +440,9 @@ body{
 .small-post {
   max-height: 170px;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;  
 }
 
 .navbar-header {
@@ -517,6 +560,11 @@ body{
 .img-center{
     margin:0 auto;
 }
+
+.panel {
+  border-radius: 0px;
+}
+
 .panel-box{
     box-shadow: 0 0 30px #4d4d4d;
 }

@@ -30,7 +30,7 @@ angular.module('eduardomarinFsApp', [
       controller: 'AdminCtrl',
       authenticate: true
     })
-    .when('/entry/:id', {
+    .when('/blog/entry/:id', {
       templateUrl: 'partials/entry',
       controller: 'EntryCtrl'
     })

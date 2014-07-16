@@ -16,7 +16,11 @@
             </form>
         </div>
     	<div class="panel panel-default" ng-repeat="post in posts" ng-if="$index%3==0">
-           <div class="panel-heading"><a href ng-click="goTo(post._id);" class="pull-right">View all</a> <h4>{{post.title}}</h4></div>
+           <div class="panel-heading">
+           	<div>
+           		<span class="glyphicon glyphicon-time"></span>{{post.date | date}}
+           		<a href ng-click="goTo(post._id);" class="pull-right">View all</a> </div>
+           	<h4>{{post.title}}</h4></div>
    			<div class="panel-body">
    			<!--
               <img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=70" class="img-circle pull-right"> <a href="#">Guidance and Tools</a>
@@ -28,7 +32,12 @@
     </div>
      <div class="col-md-4 col-sm-6">
     	<div class="panel panel-default" ng-repeat="post in posts" ng-if="$index%3==1">
-           <div class="panel-heading"><a href ng-click="goTo(post._id);" class="pull-right">View all</a> <h4>{{post.title}}</h4></div>
+           <div class="panel-heading">
+           	<div>
+           		<span class="glyphicon glyphicon-time"></span>{{post.date | date}}
+           		<a href ng-click="goTo(post._id);" class="pull-right">View all</a>
+           	</div>
+           	<h4>{{post.title}}</h4></div>
    			<div class="panel-body">
               <div ng-bind-html="post.body" class="small-post"></div>
             </div>
@@ -36,7 +45,12 @@
     </div>
      <div class="col-md-4 col-sm-6">
     	<div class="panel panel-default" ng-repeat="post in posts" ng-if="$index%3==2">
-           <div class="panel-heading"><a href ng-click="goTo(post._id);" class="pull-right">View all</a> <h4>{{post.title}}</h4></div>
+           <div class="panel-heading">
+           	<div>
+           		<span class="glyphicon glyphicon-time"></span>{{post.date | date}}
+           		<a href ng-click="goTo(post._id);" class="pull-right">View all</a>
+           	</div>
+           	<h4>{{post.title}}</h4></div>
    			<div class="panel-body">
               <div ng-bind-html="post.body" class="small-post"></div>
             </div>

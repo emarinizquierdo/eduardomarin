@@ -4,15 +4,16 @@
 <div class="container" id="main" style="background-color:white">
 
   <div class="row">
-  	<div class="col-md-12 ha-waypoint" data-animate-down="to-down" data-animate-up="to-up"><h2>{{postData.title}}</h2></div>
+  	<div class="col-md-12 ha-waypoint" data-animate-down="to-down" data-animate-up="to-up">
+		<h2 class="inline">{{postData.title}}</h2>
+    </div>
     <div class="col-md-12">
     	<div class="panel panel-default">
    			<div class="panel-body">
-   			<!--
-              <img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=70" class="img-circle pull-right"> <a href="#">Guidance and Tools</a>
+              <span class="pull-right"><span class="glyphicon glyphicon-time"></span>{{postData.date | date}}</span>
               <div class="clearfix"></div>
-              <hr>-->
-              <div ng-bind-html="postData.body"></div>
+              <hr>
+              <div ng-bind-html="postData.body" ></div>
             </div>
          </div>
     </div>

@@ -26,7 +26,7 @@ angular.module('eduardomarinFsApp')
     }
 
     $scope.goTo = function( p_entry ){
-    	$location.path("/entry/" + p_entry);
+    	$location.path("/blog/entry/" + p_entry);
     }
 
     var   $haHeader = $( '.ha-header' )
