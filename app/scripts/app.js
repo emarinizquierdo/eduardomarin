@@ -5,7 +5,8 @@ angular.module('eduardomarinFsApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'textAngular'
+  'textAngular',
+  'ui.bootstrap'
 ])
 .config(function ($routeProvider, $locationProvider, $httpProvider) {
   $routeProvider

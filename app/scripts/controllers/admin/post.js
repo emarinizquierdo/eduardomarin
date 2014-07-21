@@ -8,6 +8,18 @@ angular.module('eduardomarinFsApp')
     $scope.postData = null;
     $scope.isAdmin = Auth.isAdminLoggedIn;
     
+    $scope.dt = new Date();
+
+    $scope.opened = false;
+	$scope.format = 'dd-MMMM-yyyy';
+
+	$scope.open = function($event) {
+		$event.preventDefault();
+		$event.stopPropagation();
+
+		$scope.opened = !$scope.opened;
+	};
+
     $scope.isActive = function(route) {
       return route === $location.path();
     };
@@ -18,6 +30,8 @@ angular.module('eduardomarinFsApp')
 
   	$scope.savePost = function(p_data){
 
+  		p_data.date = $scope.dt.getTime();
+  		
         if($routeParams.id){
             Post.update(p_data, _OnSuccess, _OnError);
         }else{
@@ -38,6 +52,7 @@ angular.module('eduardomarinFsApp')
         if($routeParams.id){
             $http.get('/api/post/' + $routeParams.id).success(function(post) {
            		$scope.postData = post;
+           		$scope.dt = new Date($scope.postData.date);
             }).error(function(error){
                 
             });

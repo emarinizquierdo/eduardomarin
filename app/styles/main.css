@@ -122,6 +122,10 @@ body{
   -webkit-animation-timing-function: linear;
 }
 
+.btn-group {
+  margin: 6px 5px;
+}
+
 /* Headers */
 
 .ha-header {
