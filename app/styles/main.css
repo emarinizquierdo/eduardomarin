@@ -24,6 +24,15 @@ body{
   margin-right: 0px;
 }
 
+.color-red {
+  color: #df5a48;
+}
+
+.color-red:hover {
+  color: #a84335; 
+  text-decoration: none;
+}
+
 /* Fonts */
 
 .neucha {

@@ -20,7 +20,6 @@ angular.module('eduardomarinFsApp')
         })
         .catch( function(err) {
           err = err.data;
-          $scope.errors.other = err.message;
         });
       }
     };

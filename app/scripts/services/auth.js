@@ -23,7 +23,7 @@ angular.module('eduardomarinFsApp')
           password: user.password
         }, function(user) {
           $rootScope.currentUser = user;
-          $cookieStore.set('user', user);
+          $cookieStore.put('user', user);
           return cb();
         }, function(err) {
           return cb(err);

@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-  .controller('BlogCtrl', function ($rootScope, $scope, $location, $http, Auth, Post) {
-    
+.controller('AdminPostsCtrl', function ($rootScope, $scope, $location, $http, Auth, Post) {
     $scope.posts = [];
     $scope.postData = null;
     $scope.isAdmin = Auth.isAdminLoggedIn();
@@ -17,18 +16,20 @@ angular.module('eduardomarinFsApp')
         });
     }
 
-    $scope.savePost = function(p_data){
+    $scope.DeletePost = function( p_id ){
+        Post.delete({id : p_id}, function(data) {
+       		
+       		 _LoadPost();
 
-        Post.create(p_data, function(){
-        	_LoadPost();
-        }); 
-        
+        }, function(error){
+            
+        });
     }
 
     $scope.goTo = function( p_entry ){
-    	$location.path("/blog/entry/" + p_entry);
+    	$location.path("/admin/post/" + p_entry);
     }
 
     _LoadPost();
 
-  });
+});

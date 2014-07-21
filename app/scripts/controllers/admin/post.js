@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-  .controller('AdminCtrl', function ($scope, $http, $location, $routeParams, Auth, Post) {
-    
+.controller('AdminPostCtrl', function ($scope, $http, $location, $routeParams, Auth, Post) {
 
     $scope.hasSession = false;
     $scope.errors = {};
@@ -47,4 +46,4 @@ angular.module('eduardomarinFsApp')
 
     _LoadPost();
 
-  });
+});

@@ -1,12 +1,12 @@
-<nav id="ha-header" class="neucha ha-header to-up navbar header navbar-fixed-top " role="navigation">
+<nav id="ha-header" ng-class="{'to-down' : !inMain}" class="neucha ha-header to-up navbar header navbar-fixed-top " role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="row">
           <div class="col-md-2">
           </div>
           <div class="col-sm-12 col-md-5">
-            <div class="circle photo-profile" ></div>
-            <h1 class="main-title neucha">Eduardo Marín Izquierdo</h1>
+            <div class="circle photo-profile" ng-class="{'to-down' : !inMain}" ></div>
+            <h1 class="main-title neucha" ng-class="{'to-down' : !inMain}">Eduardo Marín Izquierdo</h1>
             <span class="glyphicon glyphicon-align-justify pull-right menu-icon" ng-click="toggleCollapse = !toggleCollapse"></span>
           </div>
           <div>
@@ -20,6 +20,7 @@
                     <li><a href scroll-on-click sc-target="#contact">Contact</a></li>
                     <li><a href scroll-on-click sc-target="#more-info">More info</a></li>
                     <li><a href="/blog">Blog</a></li>
+                    <li ng-if="isAdmin"><a href ng-click="logout()"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
