@@ -1,3 +1,4 @@
+<div class="container-fluid neucha another-container" >
 <!-- Header -->
 <div style="background-color:white">
 <!-- Main -->
@@ -12,8 +13,8 @@
       <ul class="list-unstyled">
         <li class="nav-header">
             <ul class="list-unstyled collapse in" id="userMenu">
-                <li><a href="#"><i class="glyphicon glyphicon-pencil"></i> Posts <span class="badge badge-info">4</span></a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> Comments</a></li>
+                <li><a href="/admin/posts"><i class="glyphicon glyphicon-pencil"></i> Posts <span class="badge badge-info">4</span></a></li>
+                <li><a href="/admin/comments"><i class="glyphicon glyphicon-comment"></i> Comments</a></li>
             </ul>
         </li>
         
@@ -23,18 +24,13 @@
     <div class="col-md-10">
       
       <!-- column 2 -->	
-      
-      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
-      
-      	<hr>
-      
       	<div class="row">
       		<div class="col-md-12">
 				<div class="panel panel-default">
                 	<div class="panel-heading">
                       	<div class="panel-title">
                   		<i class="glyphicon glyphicon-wrench pull-right"></i>
-                      	<h4>Post Request</h4>
+                      	<h4>Posts</h4>
                       	</div>
                 	</div>
                 	<div class="panel-body">
@@ -44,7 +40,7 @@
 							<tr><th>Título</th><th>Fecha</th><th></th><th></th></tr>
 						</thead>
 							<tbody>
-							<tr ng-repeat="post in posts"><td>{{post.title}}</td><td>{{post.date | date}}</td><td><a href ng-click="goTo(post._id)" class="glyphicon glyphicon-pencil"></a></td><td><a href ng-click="DeletePost(post._id)" class="glyphicon glyphicon-trash color-red"></a></td></tr>
+							<tr ng-repeat="post in posts"><td><a href ng-click="goTo('/blog/entry/' + post._id)">{{post.title}}</a></td><td>{{post.date | date}}</td><td><a href ng-click="goTo('/admin/post/' + post._id)" class="glyphicon glyphicon-pencil"></a></td><td><a href ng-click="DeletePost(post._id)" class="glyphicon glyphicon-trash color-red"></a></td></tr>
 							</tbody>
 						</table>   
 
@@ -54,6 +50,7 @@
       	</div>
 		
      
+</div>
 </div>
 </div>
 <!-- /Main -->

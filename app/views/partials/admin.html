@@ -1,3 +1,4 @@
+<div class="container-fluid neucha another-container" >
 <!-- Header -->
 <div style="background-color:white">
 <!-- Main -->
@@ -24,7 +25,7 @@
       
       <!-- column 2 -->	
       
-      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
+      <a><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
       
       	<hr>
       
@@ -47,7 +48,17 @@
                            <input ng-model="postData.title" type="text" class="form-control" placeholder="Enter Title">
                           </div>
                         </div>      
-                        
+                        <div class="control-group">   
+                          <label>Fecha</label>
+                          <div class="controls">
+                            <p class="input-group">
+                              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened"/>
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                              </span>
+                            </p>
+                          </div>
+                        </div>
                         <div class="control-group">
                           <label>Content</label>
                           <div class="controls">
@@ -72,10 +83,7 @@
                 </div><!--/panel-->
       		</div>
       	</div>
-		<div class="row">
-           
-
-            
+		<div class="row" ng-if="showOtherTools">            
           
             <!-- center left-->	
          	<div class="col-md-6">
@@ -275,11 +283,11 @@
       
       <hr>
       
-      <a href="#"><strong><i class="glyphicon glyphicon-comment"></i> Discussions</strong></a>  
+      <a ng-if="showOtherTools" href="#"><strong><i class="glyphicon glyphicon-comment"></i> Discussions</strong></a>  
       
       <hr>
       
-      <div class="row">
+      <div class="row" ng-if="showOtherTools">
         <div class="col-md-12">
           <ul class="list-group">
             <li class="list-group-item"><a href="#"><i class="glyphicon glyphicon-flash"></i> <small>(3 mins ago)</small> The 3rd page reports don't contain any links. Does anyone know why..</a></li>
@@ -294,25 +302,5 @@
   	</div><!--/col-span-9-->
 </div>
 </div>
-<!-- /Main -->
-
-<footer class="text-center">This Bootstrap 3 dashboard layout is compliments of <a href="http://www.bootply.com/85850"><strong>Bootply.com</strong></a></footer>
-
-<div class="modal" id="addWidgetModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title">Add Widget</h4>
-      </div>
-      <div class="modal-body">
-        <p>Add a widget stuff here..</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#" data-dismiss="modal" class="btn">Close</a>
-        <a href="#" class="btn btn-primary">Save changes</a>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dalog -->
-</div><!-- /.modal -->
 </div>
+<!-- /Main -->

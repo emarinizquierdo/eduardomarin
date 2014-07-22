@@ -9,6 +9,18 @@ angular.module('eduardomarinFsApp')
     $scope.postData = null;
     $scope.isAdmin = Auth.isAdminLoggedIn;
     
+    $scope.dt = new Date();
+
+    $scope.opened = false;
+    $scope.format = 'dd-MMMM-yyyy';
+
+    $scope.open = function($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+
+        $scope.opened = !$scope.opened;
+    };
+    
     $scope.isActive = function(route) {
       return route === $location.path();
     };

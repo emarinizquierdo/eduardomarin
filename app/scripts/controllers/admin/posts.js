@@ -26,8 +26,8 @@ angular.module('eduardomarinFsApp')
         });
     }
 
-    $scope.goTo = function( p_entry ){
-    	$location.path("/admin/post/" + p_entry);
+    $scope.goTo = function( p_hash ){
+    	$location.path( p_hash );
     }
 
     _LoadPost();
