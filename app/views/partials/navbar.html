@@ -13,14 +13,10 @@
         <div class="col-sm-5 col-md-5 navbar-wrapper">
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div ng-class="{'collapse' : !toggleCollapse}" class="navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav header-nav">
-                    <li class="active"><a href scroll-on-click sc-target="#home">Home</a></li>
-                    <li><a href="/" scroll-on-click sc-target="#skills">Skills</a></li>
-                    <li><a href scroll-on-click sc-target="#projects">Projects</a></li>
-                    <li><a href scroll-on-click sc-target="#contact">Contact</a></li>
-                    <li><a href scroll-on-click sc-target="#more-info">More info</a></li>
-                    <li><a href="/blog">Blog</a></li>
+                <ul class="nav navbar-nav header-nav" ng-click="toggleCollapse = false">
+                    <li ng-repeat="item in menu" ng-class="{'active' : activeTarget == item.target}" ng-click="setActive(item.target)"><a href="{{item.path}}" ng-if="!item.inmain">{{item.name}}</a><a href="{{item.path}}" scroll-on-click sc-target="{{item.target}}" ng-if="item.inmain">{{item.name}}</a></li>
                     <li ng-if="isAdmin"><a href ng-click="logout()"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+                    <li ng-if="!isAdmin"><a href="/login"><i class="glyphicon glyphicon-lock"></i> Login</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>

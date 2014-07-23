@@ -92,8 +92,8 @@ angular.module('eduardomarinFsApp')
 	    },
 	    "en" : {
 	    	"MAIN" : {
-	    		  "MESSAGE_01" : "Do you have any idea?"
-	    		, "MESSAGE_02" : "Then... I can do it reality!!!"
+	    		  "MESSAGE_01" : "Front-End Web Developer"
+	    		, "MESSAGE_02" : "Walking to 'FullStack'"
 	    	},
 	    	"SKILLS" : {
 	    		  "MAIN" : "Those are my skills"

@@ -114,7 +114,7 @@ body{
   100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.shake:hover {
+.shake {
   -webkit-animation-name: spaceboots;
   -webkit-animation-duration: 0.8s;
   -webkit-transform-origin:50% 50%;
@@ -230,6 +230,15 @@ body{
   opacity: 1;
 }
 
+/* Menu */
+.navbar-collapse {
+  max-height: none;
+}
+
+.navbar-wrapper .navbar-nav li.active>a {
+  color: #E45555;
+}
+
 /* Containers */
 
 .site_container {
@@ -261,13 +270,25 @@ body{
 }
 
 
+/* Blog */
+.panel-body {
+  overflow: hidden;
+}
+
+.panel-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* Small devices (tablets, 768px and up) */
 @media (max-width:767px) {
 
     .main-title,
     .main-title.to-up {
       text-align: center;
-      font-size: 40px;
+      font-size: 30px;
+      margin-right:35px;
     }
 
     .main-title.to-down {
