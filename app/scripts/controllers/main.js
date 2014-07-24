@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-.controller('MainCtrl', ['$rootScope', '$scope', '$window', '$timeout', 'Lang', function ($rootScope, $scope, $window, $timeout, Lang) {
+.controller('MainCtrl', ['$rootScope', '$scope', '$window', '$timeout', '$location', 'Lang', function ($rootScope, $scope, $window, $timeout, $location, Lang) {
     
     $scope._LINKEDIN = "https://www.linkedin.com/pub/eduardo-mar%C3%ADn-izquierdo/30/578/8bb";
     $scope._GOOGLEPLUS = "https://plus.google.com/u/0/+EduardoMar%C3%ADnIzquierdodeveloper/about";
@@ -41,7 +41,8 @@ angular.module('eduardomarinFsApp')
 			animClassUp = $el.data( 'animateUp' );
 
 		$el.waypoint( function( direction ){
-			if( direction === 'down' && animClassDown ) {
+
+			if( direction === 'down' && animClassDown && $location.$$path == "/") {
 				$haHeader.addClass(animClassDown);
 				$mainTitle.addClass(animClassDown);
 				$photoProfile.addClass(animClassDown);
@@ -49,7 +50,7 @@ angular.module('eduardomarinFsApp')
 				$mainTitle.removeClass(animClassUp);
 				$photoProfile.removeClass(animClassUp);
 			}
-			else if( direction === 'up' && animClassUp ){
+			else if( direction === 'up' && animClassUp && $location.$$path == "/"){
 				$haHeader.addClass(animClassUp);
 				$mainTitle.addClass(animClassUp);
 				$photoProfile.addClass(animClassUp);

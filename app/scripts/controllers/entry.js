@@ -4,16 +4,20 @@ angular.module('eduardomarinFsApp')
 .controller('EntryCtrl', function ($scope, $http, $routeParams, Post) {
     
     $scope.postData = null;
+    $scope.loading = false;
 
     function _LoadPost(){
+
     	if($routeParams.id){
 
+    		$scope.loading = true;
+
 	        Post.get({ id : $routeParams.id }, function(data) {
-	       		
+	       		$scope.loading = false;
 	       		$scope.postData = data;
 
 	        },function(error){
-	            
+	            $scope.loading = false;
 	        });
 	    }
     };

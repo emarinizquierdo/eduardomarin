@@ -2,17 +2,30 @@
 
 angular.module('eduardomarinFsApp')
 .controller('AdminPostsCtrl', function ($rootScope, $scope, $location, $http, Auth, Post) {
+    
     $scope.posts = [];
     $scope.postData = null;
+    $scope.offset = 0;
+    $scope.readedAll = false;
+    $scope.loading = false;
     $scope.isAdmin = Auth.isAdminLoggedIn();
 
     function _LoadPost(){
-        $http.get('/api/post/').success(function(data) {
-       		
-       		$scope.posts = data.data;
+    	$scope.loading = true;
+        Post.get({numPosts:10, cursor: $scope.offset}, function(data) {
 
-        }).error(function(error){
-            
+       		$scope.posts = $scope.posts.concat(data.data);
+       		$scope.posts.total = data.total;
+       		$scope.offset += $scope.posts.length;
+       		
+       		if($scope.offset >= $scope.posts.total){
+       			$scope.readedall = true;
+       		}
+
+       		$scope.loading = false;
+
+        },function(error){
+            $scope.loading = false;
         });
     }
 
@@ -28,6 +41,12 @@ angular.module('eduardomarinFsApp')
 
     $scope.goTo = function( p_hash ){
     	$location.path( p_hash );
+    }
+
+    $scope.loadMore = function( ){
+    	if(!$scope.readedall){
+    		_LoadPost();
+    	}
     }
 
     _LoadPost();
