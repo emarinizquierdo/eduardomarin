@@ -12,7 +12,7 @@ angular.module('eduardomarinFsApp')
 
     function _LoadPost(){
     	$scope.loading = true;
-        Post.get({numPosts:10, cursor: $scope.offset}, function(data) {
+        Post.get({numPosts:20, cursor: $scope.offset}, function(data) {
 
        		$scope.posts = $scope.posts.concat(data.data);
        		$scope.posts.total = data.total;
