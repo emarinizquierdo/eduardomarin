@@ -298,6 +298,10 @@ body{
   margin-right: auto;
 }
 
+#disqus_thread {
+  margin: 20px;
+}
+
 /* Footers */
 
 /* First Content */
@@ -511,14 +515,20 @@ body{
 
 #home {
   padding-top: 160px;
+  background-color: #E5E5E5;
+  width: 100%;
 }
 
 .another-container {
   padding-top: 60px;
+  background-color: #E5E5E5;
+  width: 100%;
 }
 
 .another-container .container {
   padding-top: 35px;
+  background-color: #E5E5E5;
+  width: 100%;
 }
 
 .small-post {
