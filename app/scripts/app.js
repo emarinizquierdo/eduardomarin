@@ -75,6 +75,5 @@ angular.module('eduardomarinFsApp', [
       $location.path('/login');
     }
   });
-
     
 });

@@ -31,7 +31,7 @@ angular.module('eduardomarinFsApp')
   	$scope.savePost = function(p_data){
 
   		p_data.date = $scope.dt.getTime();
-  		
+
         if($routeParams.id){
             Post.update(p_data, _OnSuccess, _OnError);
         }else{
