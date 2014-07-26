@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-.controller('AdminPostsCtrl', function ($rootScope, $scope, $location, $http, Auth, Post) {
+.controller('AdminPostsCtrl', function ($rootScope, $scope, $location, $http, Auth, Post, Lang) {
     
     $scope.posts = [];
     $scope.postData = null;
     $scope.offset = 0;
     $scope.readedAll = false;
     $scope.loading = false;
-    $scope.isAdmin = Auth.isAdminLoggedIn();
+    $scope.lang = Lang;
 
     function _LoadPost(){
     	$scope.loading = true;

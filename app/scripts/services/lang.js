@@ -3,9 +3,9 @@
 angular.module('eduardomarinFsApp')
 .service('Lang', [function Flickr() {
 
-	var that = this;
+	var _lang = {};
 
-	that.dictionary = {
+	_lang.dictionary = {
 	    
 	    "es" : {
 	    	"MAIN" : {
@@ -88,6 +88,36 @@ angular.module('eduardomarinFsApp')
 			"FOOTER" : {
 				  "QUESTION" : "¿Quieres que te envíe mi CV? Déjame tu e-mail"
 				, "NOWORRY" : "Prometo no enviarte spam"
+			},
+			"MENU" : {
+				  "HOME" : "Home"
+				, "SKILLS" : "Skills"
+				, "PROJECTS" : "Proyectos"
+				, "CONTACT" : "Contacto"
+				, "MOREINFO" : "Más Info"
+				, "BLOG" : "Blog"
+				, "LOGIN" : "Login"
+				, "LOGOUT" : "Logout"
+				, "ADMIN" : "Admin"
+			},
+			"BLOG" : {
+				  "WHATSNEW" : "Entrada rápida"
+				, "VIEWALL" : "Ver todo"
+				, "LOADMORE" : "Cargar más"
+			},
+			"COMMON" : {
+				  "DASHBOARD" : "Escritorio"
+				, "POSTS" : "Entradas"
+				, "POST" : "Entrada"
+				, "COMMENTS" : "Comentarios"
+				, "MYDASHBOARD" : "Mi escritorio"
+				, "EDITPOST" : "Editar entrada"
+				, "NEWPOST" : "Nueva entrada"
+				, "TITLE" : "Título"
+				, "DATE" : "Fecha"
+				, "CONTENT" : "Contenido"
+				, "SUBMIT" : "Publicar"
+				, "SAVE" : "Guardar"
 			}
 	    },
 	    "en" : {
@@ -171,16 +201,52 @@ angular.module('eduardomarinFsApp')
 			"FOOTER" : {
 				  "QUESTION" : "Do you want to I send you my CV by e-mail?"
 				, "NOWORRY" : "Ie promise not to spam"
+			},
+			"MENU" : {
+				  "HOME" : "Home"
+				, "SKILLS" : "Skills"
+				, "PROJECTS" : "Projects"
+				, "CONTACT" : "Contact"
+				, "MOREINFO" : "More info"
+				, "BLOG" : "Blog"
+				, "LOGIN" : "Login"
+				, "LOGOUT" : "Logout"
+				, "ADMIN" : "Admin"
+			},
+			"BLOG" : {
+				  "WHATSNEW" : "What's new"
+				, "VIEWALL" : "View all"
+				, "LOADMORE" : "Load more"
+			},
+			"COMMON" : {
+				  "DASHBOARD" : "Dashboard"
+				, "POSTS" : "Posts"
+				, "POST" : "Post"
+				, "COMMENTS" : "Comments"
+				, "MYDASHBOARD" : "My Dashboard"
+				, "EDITPOST" : "Edit post"
+				, "NEWPOST" : "New post"
+				, "TITLE" : "Title"
+				, "DATE" : "Date"
+				, "CONTENT" : "Content"
+				, "SUBMIT" : "Submit"
+				, "SAVE" : "Save"
 			}
 	    } 
 
     };
 
     var _navLang = navigator.language
-    that.activeLang = (_navLang && ( _navLang == "es" || _navLang == "en") ) ? _navLang : "es";
+    
+    _lang.activeLang = (_navLang && ( _navLang == "es" || _navLang == "en") ) ? _navLang : "es";
 
-    that.translate = that.dictionary[that.activeLang];
+    _lang.translate = _lang.dictionary[_lang.activeLang];
 
-    return that;
+    _lang.setActiveLang = function( p_lang ){
+    	_lang.activeLang = p_lang;
+    	_lang.translate = _lang.dictionary[_lang.activeLang];
+    };
+
+    return _lang;
 
 }]);

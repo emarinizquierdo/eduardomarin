@@ -286,6 +286,10 @@ body{
   color: #E45555;
 }
 
+.navbar-wrapper .login-icon {
+
+}
+
 /* Containers */
 
 .site_container {
@@ -333,6 +337,10 @@ body{
 
 .badge-primary {
   background-color: #428bca;
+}
+
+.edit-post {
+  margin-right: 10px;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -570,7 +578,6 @@ body{
 }
 .header-nav li>a:hover, .header-nav li>a:focus{
     color:#E45555;
-    background-color:#006483;
 }
 
 .header-nav-right .dropdown>a {
@@ -588,7 +595,6 @@ body{
 .header-nav-right .dropdown-menu li>a:hover, 
 .header-nav-right .dropdown-menu li>a:focus{
     color:#726A6A;
-    background-color:#006483;
 }
 
 .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {

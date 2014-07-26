@@ -7,7 +7,6 @@ angular.module('eduardomarinFsApp')
     $scope.hasSession = false;
     $scope.errors = {};
     $scope.postData = null;
-    $scope.isAdmin = Auth.isAdminLoggedIn;
     
     $scope.dt = new Date();
 
@@ -20,7 +19,7 @@ angular.module('eduardomarinFsApp')
 
         $scope.opened = !$scope.opened;
     };
-    
+
     $scope.isActive = function(route) {
       return route === $location.path();
     };

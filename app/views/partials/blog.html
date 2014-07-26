@@ -1,31 +1,28 @@
-<div class="container-fluid neucha another-container" >
+<div class="container-fluid another-container" >
 
 <!--main-->
 <div class="container" id="main">
 
   <div class="row">
-  	<div class="col-md-12"><h2>Posts</h2></div>
+  	<div class="col-md-12"><h2>{{lang.translate.COMMON.POSTS}}</h2></div>
     <div class="col-md-4 col-sm-6">
     	<div class="well" ng-if="isAdmin"> 
              <form class="form-horizontal" role="form" ng-submit="savePost(postData)">
-              <h4>What's New</h4>
+              <h4>{{lang.translate.BLOG.WHATSNEW}}</h4>
                <div class="form-group" style="padding:14px;">
                 <textarea ng-model="postData.body" class="form-control" placeholder="Update your status"></textarea>
               </div>
-              <button class="btn btn-success pull-right" type="submit">Post</button><ul class="list-inline"><li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li></ul>
+              <button class="btn btn-success pull-right" type="submit">{{lang.translate.COMMON.POST}}</button><ul class="list-inline"><li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li></ul>
             </form>
         </div>
     	<div class="panel panel-default" ng-repeat="post in posts" ng-if="$index%3==0">
            <div class="panel-heading">
            	<div>
            		<span class="glyphicon glyphicon-time"></span>{{post.date | date}}
-           		<a href ng-click="goTo(post._id);" class="pull-right">View all</a> </div>
+           		<a href ng-click="goTo(post._id);" class="pull-right">{{lang.translate.BLOG.VIEWALL}}</a> </div>
+              <a ng-if="isAdmin" href="admin/post/{{post._id}}" class="edit-post glyphicon glyphicon-pencil pull-right"></a>
            	<h4>{{post.title}}</h4></div>
-   			<div class="panel-body">
-   			<!--
-              <img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=70" class="img-circle pull-right"> <a href="#">Guidance and Tools</a>
-              <div class="clearfix"></div>
-              <hr>-->
+   			    <div class="panel-body">
               <div ng-bind-html="post.body" class="small-post"></div>
             </div>
          </div> 
@@ -35,7 +32,8 @@
            <div class="panel-heading">
            	<div>
            		<span class="glyphicon glyphicon-time"></span>{{post.date | date}}
-           		<a href ng-click="goTo(post._id);" class="pull-right">View all</a>
+           		<a href ng-click="goTo(post._id);" class="pull-right">{{lang.translate.BLOG.VIEWALL}}</a>
+              <a ng-if="isAdmin" href="admin/post/{{post._id}}" class="edit-post glyphicon glyphicon-pencil pull-right"></a>
            	</div>
            	<h4>{{post.title}}</h4></div>
    			<div class="panel-body">
@@ -48,7 +46,8 @@
            <div class="panel-heading">
            	<div>
            		<span class="glyphicon glyphicon-time"></span>{{post.date | date}}
-           		<a href ng-click="goTo(post._id);" class="pull-right">View all</a>
+           		<a href ng-click="goTo(post._id);" class="pull-right">{{lang.translate.BLOG.VIEWALL}}</a>
+              <a ng-if="isAdmin" href="admin/post/{{post._id}}" class="edit-post glyphicon glyphicon-pencil pull-right"></a>
            	</div>
            	<h4>{{post.title}}</h4></div>
    			<div class="panel-body">
@@ -58,7 +57,7 @@
     </div><!--/articles-->
     </div>
     <div class="text-center" ng-if="loading"><span class="glyphicon glyphicon-refresh pull-center spinner"></span></div>
-    <button type="button" class="btn btn-default col-md-12" ng-if="!readedall && !loading" ng-click="loadMore()">Cargar más</button>
+    <button type="button" class="btn btn-default col-md-12" ng-if="!readedall && !loading" ng-click="loadMore()">{{lang.translate.BLOG.LOADMORE}}</button>
     
     <hr>
         

@@ -5,8 +5,11 @@ angular.module('eduardomarinFsApp')
     
     // Get currentUser from cookie
     $rootScope.currentUser = $cookieStore.get('user') || null;
+    $rootScope.isAdmin = false;
 
-    return {
+    $cookieStore.remove('user');
+
+    var _auth = {
 
       /**
        * Authenticate user
@@ -17,13 +20,15 @@ angular.module('eduardomarinFsApp')
        */
       login: function(user, callback) {
         var cb = callback || angular.noop;
+        var that = this;
 
         return Session.save({
           email: user.email,
           password: user.password
         }, function(user) {
           $rootScope.currentUser = user;
-          $cookieStore.put('user', user);
+          $rootScope.isAdmin = that.isAdminLoggedIn();
+          //$cookieStore.put('user', user);
           return cb();
         }, function(err) {
           return cb(err);
@@ -42,6 +47,8 @@ angular.module('eduardomarinFsApp')
         return Session.delete(function() {
             $rootScope.currentUser = null;
             $cookieStore.remove('user');
+            $rootScope.isAdmin = false;
+            
             return cb();
           },
           function(err) {
@@ -117,6 +124,12 @@ angular.module('eduardomarinFsApp')
       isAdminLoggedIn: function() {
         var user = ($rootScope.currentUser && ($rootScope.currentUser.role === "admin"));
         return !!user;
-      },
+      }
+
     };
+
+    $rootScope.isAdmin = _auth.isAdminLoggedIn();
+    
+    return _auth;
+
   });

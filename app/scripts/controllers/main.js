@@ -11,7 +11,7 @@ angular.module('eduardomarinFsApp')
     $scope._BOOKING = "https://www.flickr.com/photos/emarin/sets/72157630576198222/";
     $scope._TWITTER = "https://twitter.com/emarinizquierdo";
 
-	$scope.translate = Lang.translate;
+	$scope.lang = Lang;
 
 	$scope.goTo = function( p_url ){
 		$window.open(p_url);

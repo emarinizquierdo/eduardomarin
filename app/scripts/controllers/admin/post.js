@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-.controller('AdminPostCtrl', function ($scope, $http, $location, $routeParams, Auth, Post) {
+.controller('AdminPostCtrl', function ($scope, $http, $location, $routeParams, Auth, Post, Lang) {
 
     $scope.hasSession = false;
     $scope.errors = {};
     $scope.postData = null;
-    $scope.isAdmin = Auth.isAdminLoggedIn;
+    $scope.lang = Lang;
     
     $scope.dt = new Date();
 
@@ -41,7 +41,7 @@ angular.module('eduardomarinFsApp')
     }
 
     function _OnSuccess(){
-    	$location.path("/admin");
+    	$location.path("/admin/posts");
     }
 
     function _OnError( err ){

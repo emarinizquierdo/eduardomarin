@@ -6,15 +6,15 @@
 <div class="row">
 	<div class="col-md-2">
       <!-- Left column -->
-      <a href="/admin"><strong><i class="glyphicon glyphicon-dashboard"></i> Dashboard</strong></a>  
+      <a href="/admin"><strong><i class="glyphicon glyphicon-dashboard"></i> {{lang.translate.COMMON.DASHBOARD}}</strong></a>  
       
       <hr>
       
       <ul class="list-unstyled">
         <li class="nav-header">
             <ul class="list-unstyled collapse in" id="userMenu">
-                <li><a href="/admin/posts"><i class="glyphicon glyphicon-pencil"></i> Posts <span class="badge badge-info">4</span></a></li>
-                <li><a href="/admin/comments"><i class="glyphicon glyphicon-comment"></i> Comments</a></li>
+                <li><a href="/admin/posts"><i class="glyphicon glyphicon-pencil"></i> {{lang.translate.COMMON.POSTS}} <span class="badge badge-info">4</span></a></li>
+                <li><a href="/admin/comments"><i class="glyphicon glyphicon-comment"></i> {{lang.translate.COMMON.COMMENTS}}</a></li>
             </ul>
         </li>
         
@@ -25,7 +25,7 @@
       
       <!-- column 2 -->	
       
-      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
+      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> {{lang.translate.COMMON.MYDASHBOARD}}</strong></a>  
       
       	<hr>
       
@@ -35,7 +35,7 @@
                 	<div class="panel-heading">
                       	<div class="panel-title">
                   		<i class="glyphicon glyphicon-wrench pull-right"></i>
-                      	<h4>Post Request</h4>
+                      	<h4>{{lang.translate.COMMON.EDITPOST}}</h4>
                       	</div>
                 	</div>
                 	<div class="panel-body">
@@ -43,13 +43,13 @@
                       <form class="form form-vertical" ng-submit="savePost(postData)">
                        
                         <div class="control-group">
-                          <label>Título</label>
+                          <label>{{lang.translate.COMMON.TITLE}}</label>
                           <div class="controls">
                            <input ng-model="postData.title" type="text" class="form-control" placeholder="Enter Title">
                           </div>
                         </div>
                         <div class="control-group">   
-	                        <label>Fecha</label>
+	                        <label>{{lang.translate.COMMON.DATE}}</label>
 						        <div class="controls">
 						            <p class="input-group">
 										<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened"/>
@@ -60,7 +60,7 @@
 						        </div>
 						</div>
                         <div class="control-group">
-                          <label>Content</label>
+                          <label>{{lang.translate.COMMON.CONTENT}}</label>
                           <div class="controls">
                           	<div text-angular ng-model="postData.body"></div>
                           	
@@ -71,7 +71,7 @@
                           	<label></label>
                         	<div class="controls">
                         	<button type="submit" class="btn btn-primary">
-                              Post
+                              {{lang.translate.COMMON.SAVE}}
                             </button>
                         	</div>
                         </div>   

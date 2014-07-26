@@ -5,50 +5,51 @@ angular.module('eduardomarinFsApp')
     return {
       templateUrl: 'partials/navbar.html',
       restrict: 'A',
-      controller: function($rootScope, $scope, $location, Auth){
+      scope : true,
+      controller: function($rootScope, $scope, $location, Auth, Lang){
+
+        $scope.lang = Lang;
 
         $scope.menu = [
 
           {
-              name : "Home"
+              name : $scope.lang.translate.MENU.HOME
             , path : "/"
             , target : "#home"
             , inmain : true
           },
           {
-              name : "Skills"
+              name : $scope.lang.translate.MENU.SKILLS
             , path : "/"
             , target : "#skills"
             , inmain : true
           },
           {
-              name : "Projects"
+              name : $scope.lang.translate.MENU.PROJECTS
             , path : "/"
             , target : "#projects"
             , inmain : true
           },
           {
-              name : "Contact"
+              name : $scope.lang.translate.MENU.CONTACT
             , path : "/"
             , target : "#contact"
             , inmain : true
           },
           {
-              name : "More info"
+              name : $scope.lang.translate.MENU.MOREINFO
             , path : "/"
             , target : "#more-info"
             , inmain : true
           },
           {
-              name : "Blog"
+              name : $scope.lang.translate.MENU.BLOG
             , path : "/blog"
             , target : "#blog"
             , inmain : false
           }
 
         ];
-
-        $scope.isAdmin = Auth.isAdminLoggedIn();
 
         $scope.inMain = ($location.$$path == '/');
 
@@ -63,6 +64,10 @@ angular.module('eduardomarinFsApp')
           .then(function() {
             $location.path('/login');
           });
+        };
+
+        $scope.changeLang = function( p_lang ){
+          Lang.setActiveLang(p_lang);
         };
 
         // Redirect to login if route requires auth and you're not logged in
