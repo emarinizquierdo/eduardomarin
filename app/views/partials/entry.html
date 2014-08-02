@@ -14,7 +14,7 @@
               <span class="pull-right"><span class="glyphicon glyphicon-time"></span>{{postData.date | date}}</span>
               <div class="clearfix"></div>
               <hr>
-              <div ng-bind-html="postData.body" ></div>
+              <div compile="postData.body" ></div>
         </div>
         <div id="disqus_thread"></div>
       </div>

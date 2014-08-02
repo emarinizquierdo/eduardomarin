@@ -19,8 +19,9 @@
            <div class="panel-heading">
            	<div>
            		<span class="glyphicon glyphicon-time"></span>{{post.date | date}}
-           		<a href ng-click="goTo(post._id);" class="pull-right">{{lang.translate.BLOG.VIEWALL}}</a> </div>
+           		<a href="/blog/entry/{{post._id}}" class="pull-right">{{lang.translate.BLOG.VIEWALL}}</a>
               <a ng-if="isAdmin" href="admin/post/{{post._id}}" class="edit-post glyphicon glyphicon-pencil pull-right"></a>
+            </div>
            	<h4>{{post.title}}</h4></div>
    			    <div class="panel-body">
               <div ng-bind-html="post.body" class="small-post"></div>
@@ -32,7 +33,7 @@
            <div class="panel-heading">
            	<div>
            		<span class="glyphicon glyphicon-time"></span>{{post.date | date}}
-           		<a href ng-click="goTo(post._id);" class="pull-right">{{lang.translate.BLOG.VIEWALL}}</a>
+           		<a href="/blog/entry/{{post._id}}" class="pull-right">{{lang.translate.BLOG.VIEWALL}}</a>
               <a ng-if="isAdmin" href="admin/post/{{post._id}}" class="edit-post glyphicon glyphicon-pencil pull-right"></a>
            	</div>
            	<h4>{{post.title}}</h4></div>
@@ -46,7 +47,7 @@
            <div class="panel-heading">
            	<div>
            		<span class="glyphicon glyphicon-time"></span>{{post.date | date}}
-           		<a href ng-click="goTo(post._id);" class="pull-right">{{lang.translate.BLOG.VIEWALL}}</a>
+           		<a href="/blog/entry/{{post._id}}" class="pull-right">{{lang.translate.BLOG.VIEWALL}}</a>
               <a ng-if="isAdmin" href="admin/post/{{post._id}}" class="edit-post glyphicon glyphicon-pencil pull-right"></a>
            	</div>
            	<h4>{{post.title}}</h4></div>
