@@ -67,10 +67,11 @@ angular.module('eduardomarinFsApp', [
   }]);
 
 })
-.run(function ($rootScope, $location, Auth, User) {
+.run(function ($rootScope, $location, $window, Auth, User) {
 
   // Redirect to login if route requires auth and you're not logged in
   $rootScope.$on('$routeChangeStart', function (event, next) {
+    $window.document.title = "Eduardo Marín Izquierdo";
     if (next.authenticate && !Auth.isLoggedIn()) {
       $location.path('/login');
     }

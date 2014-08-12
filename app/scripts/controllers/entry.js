@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-.controller('EntryCtrl', function ($scope, $http, $routeParams, Post) {
+.controller('EntryCtrl', function ($scope, $http, $routeParams, $window,Post) {
     
     $scope.postData = null;
     $scope.loading = false;
@@ -15,6 +15,7 @@ angular.module('eduardomarinFsApp')
 	        Post.get({ id : $routeParams.id }, function(data) {
 	       		$scope.loading = false;
 	       		$scope.postData = data;
+	       		$window.document.title = "Eduardo Marín Izquierdo " + "- " + $scope.postData.title;
 
 	        },function(error){
 	            $scope.loading = false;
