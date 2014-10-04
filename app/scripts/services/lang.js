@@ -119,6 +119,17 @@ angular.module('eduardomarinFsApp')
 				, "SUBMIT" : "Publicar"
 				, "SAVE" : "Guardar"
 			}
+			,
+			"PROFILE" : {
+				"MAIN" : {
+				  	  "MAIN" : "Principal"
+				  	, "MAIN_TITLE" : "Título principal"
+				  	, "SECONDARY_TITLE" : "Título secundario"
+				},
+				"SKILLS" : {
+				  	"MAIN" : "Skills"
+				}
+			}
 	    },
 	    "en" : {
 	    	"MAIN" : {

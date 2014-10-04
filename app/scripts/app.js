@@ -45,6 +45,10 @@ angular.module('eduardomarinFsApp', [
       controller: 'AdminPostsCtrl',
       authenticate: true
     })
+    .when('/admin/profile', {
+      templateUrl: 'partials/admin/profile',
+      controller: 'AdminProfileCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
