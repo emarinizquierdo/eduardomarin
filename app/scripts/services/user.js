@@ -17,3 +17,19 @@ angular.module('eduardomarinFsApp')
       }
 	  });
   });
+
+angular.module('eduardomarinFsApp')
+  .factory('UserProfile', function ($resource) {
+    return $resource('/api/userprofile', {
+    }, { //parameters default
+      create: {
+        method: 'POST'
+      },
+      update: {
+        method: 'PUT'
+      },
+      get: {
+        method: 'GET'
+      }
+    });
+  });

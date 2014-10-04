@@ -1,26 +1,18 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-.controller('AdminProfileCtrl', function ($rootScope, $scope, $location, $http, Auth, Post, Lang) {
+.controller('AdminProfileCtrl', function ($rootScope, $scope, $location, $http, Auth, UserProfile, Lang) {
 
-    $scope.posts = [];
+    $scope.userProfile = {};
     $scope.postData = null;
-    $scope.offset = 0;
-    $scope.readedAll = false;
     $scope.loading = false;
     $scope.lang = Lang;
 
-    function _LoadPost(){
+    function _LoadUserProfile(){
     	$scope.loading = true;
-        Post.get({numPosts:20, cursor: $scope.offset}, function(data) {
+        UserProfile.get({}, function(data) {
 
-       		$scope.posts = $scope.posts.concat(data.data);
-       		$scope.posts.total = data.total;
-       		$scope.offset += $scope.posts.length;
-       		
-       		if($scope.offset >= $scope.posts.total){
-       			$scope.readedall = true;
-       		}
+       		$scope.userProfile = data;
 
        		$scope.loading = false;
 
@@ -29,26 +21,20 @@ angular.module('eduardomarinFsApp')
         });
     }
 
-    $scope.DeletePost = function( p_id ){
-        Post.delete({id : p_id}, function(data) {
-       		
-       		 _LoadPost();
+    $scope.savePost = function(p_data){
 
-        }, function(error){
-            
-        });
+        UserProfile.update(p_data, _OnSuccess, _OnError);        
+
     }
 
-    $scope.goTo = function( p_hash ){
-    	$location.path( p_hash );
+    function _OnSuccess(){
+    	_LoadUserProfile();
     }
 
-    $scope.loadMore = function( ){
-    	if(!$scope.readedall){
-    		_LoadPost();
-    	}
+    function _OnError( err ){
+    	 $scope.errors.other = err.message;
     }
 
-    _LoadPost();
+    _LoadUserProfile();
 
 });
