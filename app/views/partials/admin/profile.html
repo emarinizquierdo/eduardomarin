@@ -42,13 +42,13 @@
 
                       <form class="form form-vertical" ng-submit="savePost(userProfile)">
                        
-                        <div class="control-group">
+                        <div class="form-group">
                           <label>{{lang.translate.PROFILE.MAIN.MAIN_TITLE}}</label>
                           <div class="controls">
                            <input ng-model="userProfile.main.mainTitle" type="text" class="form-control" placeholder="Enter Title">
                           </div>
                         </div>      
-                        <div class="control-group">
+                        <div class="form-group">
                           <label>{{lang.translate.PROFILE.MAIN.SECONDARY_TITLE}}</label>
                           <div class="controls">
                            <input ng-model="userProfile.main.secondaryTitle" type="text" class="form-control" placeholder="Enter Title">
@@ -67,14 +67,89 @@
 
                   </div><!--/panel content-->
                 </div><!--/panel-->
+
                 <div class="panel panel-default">
-                <div class="panel-heading">
+                	<div class="panel-heading">
                       	<div class="panel-title">
                   		<i class="glyphicon glyphicon-wrench pull-right"></i>
-                      	<h4>{{lang.translate.PROFILE.MAIN.MAIN}}</h4>
+                      	<h4>{{lang.translate.PROFILE.SKILLS.MAIN}}</h4>
                       	</div>
                 	</div>
-                </div>
+                	<div class="panel-body">
+
+                     	<form class="form form-vertical" ng-submit="savePost(userProfile)">
+                       
+	                        <div class="panel-group" ng-repeat="skill in userProfile.skills" id="accordion">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+												Collapsible Group Item #1
+											</a>
+										</h4>	
+									</div>
+									<div id="collapseOne" class="panel-collapse collapse in">
+										<div class="panel-body">
+											<div class="form-group">
+					                          <label>{{lang.translate.PROFILE.MAIN.MAIN_TITLE}}</label>
+					                          <div class="controls">
+					                           <input ng-model="skill.title" type="text" class="form-control" placeholder="Enter Title">
+					                          </div>
+					                        </div>
+					                        <div class="form-group">
+					                          <label>{{lang.translate.PROFILE.MAIN.MAIN_TITLE}}</label>
+					                          <div class="controls">
+					                           <input ng-model="skill.link" type="text" class="form-control" placeholder="Enter Title">
+					                          </div>
+					                        </div>      
+					                        <div class="form-group">
+					                          <label>{{lang.translate.PROFILE.MAIN.SECONDARY_TITLE}}</label>
+					                          <div class="controls">
+					                           <textarea class="form-control" rows="2" ng-model="skill.description"></textarea>
+					                          </div>
+					                        </div>
+					                        <div class="row">
+					                        	<div class="col-sm-2 text-center"><img src="http://placehold.it/80/BBBBBB/FFF" class="img-rounded img-responsive align-center"></div>
+												<div class="col-xs-10 col-sm-10 col-md-10 form-group">
+													<label>{{lang.translate.PROFILE.MAIN.MAIN_TITLE}}</label>
+													<div class="controls">
+														<input ng-model="skill.logo" type="text" class="form-control" placeholder="Enter Title">
+													</div>
+					                        	</div>   
+					                        </div>
+										</div>
+									</div>
+								</div>
+							</div>
+                      </form>
+                      <div class="control-group">
+                          	<label></label>
+                        	<div class="controls">
+                        		<button type="submit" class="btn btn-primary">
+                            	{{lang.translate.COMMON.SAVE}}
+                            	</button>
+                        	</div>
+                        </div>
+                      <div class="control-group">
+                          	<label></label>
+                        	<div class="controls">
+                        		<button type="submit" class="btn btn-primary">
+                            	{{lang.translate.COMMON.SAVE}}
+                            	</button>
+                        	</div>
+                        </div>
+                  </div><!--/panel content-->
+                </div><!--/panel-->
+
+                <div class="panel panel-default">
+                  <div class="panel-heading"><div class="panel-title"><h4>Engagement</h4></div></div>
+                  <div class="panel-body">	
+                   	<div class="col-xs-4 text-center"><img src="http://placehold.it/80/BBBBBB/FFF" class="img-circle img-responsive"></div>
+                    <div class="col-xs-4 text-center"><img src="http://placehold.it/80/EFEFEF/555" class="img-circle img-responsive"></div>
+                    <div class="col-xs-4 text-center"><img src="http://placehold.it/80/EEEEEE/222" class="img-circle img-responsive"></div>
+                  </div>
+               </div><!--/panel-->
+
       		</div>
       	</div>
 		<div class="row" ng-if="showOtherTools">            

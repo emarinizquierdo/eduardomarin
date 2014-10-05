@@ -29,7 +29,10 @@ angular.module('eduardomarinFsApp')
         method: 'PUT'
       },
       get: {
-        method: 'GET'
+        method: 'GET',
+        params: {
+          lang:'@lang'
+        }
       }
     });
   });

@@ -10,7 +10,7 @@ angular.module('eduardomarinFsApp')
 
     function _LoadUserProfile(){
     	$scope.loading = true;
-        UserProfile.get({}, function(data) {
+        UserProfile.get({ lang : Lang.activeLang }, function(data) {
 
        		$scope.userProfile = data;
 
@@ -23,6 +23,7 @@ angular.module('eduardomarinFsApp')
 
     $scope.savePost = function(p_data){
 
+    	p_data.lang = Lang.activeLang;
         UserProfile.update(p_data, _OnSuccess, _OnError);        
 
     }
@@ -35,6 +36,8 @@ angular.module('eduardomarinFsApp')
     	 $scope.errors.other = err.message;
     }
 
+    $scope.$watch('lang.activeLang', _LoadUserProfile);
+    
     _LoadUserProfile();
 
 });
