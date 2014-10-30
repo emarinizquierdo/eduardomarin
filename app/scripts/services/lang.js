@@ -132,6 +132,13 @@ angular.module('eduardomarinFsApp')
 				  	"ADD_SKILL" : "Añadir nuevo skill",
 				  	"CLICK_TO_EDIT" : "Click para editar",
 				  	"LINK" : "Enlace"
+				},
+				"PROJECTS" : {
+				  	"MAIN" : "Proyectos",
+				  	"ENTER_PROJECT" : "Introduce nuevo proyecto",
+				  	"ADD_PROJECT" : "Añadir nuevo proyecto",
+				  	"CLICK_TO_EDIT" : "Click para editar",
+				  	"LINK" : "Enlace"
 				}
 			}
 	    },

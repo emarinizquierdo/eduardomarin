@@ -1,0 +1,485 @@
+<html class="no-js"><!--<![endif]--><head><style></style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title>Eduardo Marín Izquierdo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google-site-verification" content="E9WzzMYtoib9C4NPb-xJP6Wm5aYxCbSGFhr9utk4k2Y">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/1d7769e0.vendor.css">
+    <link href="http://fonts.googleapis.com/css?family=Neucha" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/6a42f3f5.main.css">
+  <style></style><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/14/%7Bcommon,util,stats%7D.js"></script></head>
+  <body ng-app="eduardomarinFsApp" class="ng-scope" cz-shortcut-listen="true">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div navbar="" class="ng-scope"><nav id="ha-header" ng-class="{'to-down' : !inMain}" class="neucha ha-header to-up navbar header navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-sm-12 col-md-5">
+            <div class="circle photo-profile" ng-class="{'to-down' : !inMain}"></div>
+            <h1 class="main-title neucha" ng-class="{'to-down' : !inMain}">Eduardo Marín Izquierdo</h1>
+            <span class="glyphicon glyphicon-align-justify pull-right menu-icon" ng-click="toggleCollapse = !toggleCollapse"></span>
+          </div>
+          <div>
+        <div class="col-sm-5 col-md-5 navbar-wrapper">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div ng-class="{'collapse' : !toggleCollapse}" class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav header-nav" ng-click="toggleCollapse = false">
+                    <!-- ngRepeat: item in menu --><li ng-repeat="item in menu" ng-class="{'active' : activeTarget == item.target}" ng-click="setActive(item.target)" class="ng-scope active"><!-- ngIf: !item.inmain --><!-- ngIf: item.inmain --><a href="/" scroll-on-click="" sc-target="#home" ng-if="item.inmain" class="ng-scope ng-binding">Home</a><!-- end ngIf: item.inmain --></li><!-- end ngRepeat: item in menu --><li ng-repeat="item in menu" ng-class="{'active' : activeTarget == item.target}" ng-click="setActive(item.target)" class="ng-scope"><!-- ngIf: !item.inmain --><!-- ngIf: item.inmain --><a href="/" scroll-on-click="" sc-target="#skills" ng-if="item.inmain" class="ng-scope ng-binding">Skills</a><!-- end ngIf: item.inmain --></li><!-- end ngRepeat: item in menu --><li ng-repeat="item in menu" ng-class="{'active' : activeTarget == item.target}" ng-click="setActive(item.target)" class="ng-scope"><!-- ngIf: !item.inmain --><!-- ngIf: item.inmain --><a href="/" scroll-on-click="" sc-target="#projects" ng-if="item.inmain" class="ng-scope ng-binding">Proyectos</a><!-- end ngIf: item.inmain --></li><!-- end ngRepeat: item in menu --><li ng-repeat="item in menu" ng-class="{'active' : activeTarget == item.target}" ng-click="setActive(item.target)" class="ng-scope"><!-- ngIf: !item.inmain --><!-- ngIf: item.inmain --><a href="/" scroll-on-click="" sc-target="#contact" ng-if="item.inmain" class="ng-scope ng-binding">Contacto</a><!-- end ngIf: item.inmain --></li><!-- end ngRepeat: item in menu --><li ng-repeat="item in menu" ng-class="{'active' : activeTarget == item.target}" ng-click="setActive(item.target)" class="ng-scope"><!-- ngIf: !item.inmain --><!-- ngIf: item.inmain --><a href="/" scroll-on-click="" sc-target="#more-info" ng-if="item.inmain" class="ng-scope ng-binding">Más Info</a><!-- end ngIf: item.inmain --></li><!-- end ngRepeat: item in menu --><li ng-repeat="item in menu" ng-class="{'active' : activeTarget == item.target}" ng-click="setActive(item.target)" class="ng-scope"><!-- ngIf: !item.inmain --><a href="/blog" ng-if="!item.inmain" class="ng-scope ng-binding">Blog</a><!-- end ngIf: !item.inmain --><!-- ngIf: item.inmain --></li><!-- end ngRepeat: item in menu -->
+                    <li class="dropdown">
+                        <a class="login-icon dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="glyphicon glyphicon-lock"></i>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+                            <!-- ngIf: isAdmin -->
+                            <!-- ngIf: isAdmin -->
+                            <!-- ngIf: isAdmin -->
+                            <!-- ngIf: !isAdmin --><li ng-if="!isAdmin" role="presentation" class="ng-scope"><a href="/login" role="menuitem" tabindex="-1" class="ng-binding">Login</a></li><!-- end ngIf: !isAdmin -->
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- ngIf: lang.activeLang == 'es' -->
+                        <!-- ngIf: lang.activeLang == 'en' --><a href="" ng-if="lang.activeLang == 'en'" ng-click="changeLang('es')" class="ng-scope"><span class="flag-icon flag-icon-gb"></span></a><!-- end ngIf: lang.activeLang == 'en' -->
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </div>         
+    </div><!-- /.container-->
+</div></nav></div>
+
+    <!-- ngView:  --><div class="site_container ng-scope" ng-view=""><div class="container-fluid neucha ng-scope" id="home">
+
+<div class="row home-hero content">
+    <div class="col-md-12">
+        <h1 class="main-message ng-binding">Front-End Web Developer</h1>
+        <div class="row form" id="demoGroup">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="circle photo-main"></div>
+          </div>
+        </div>
+        <h2 class="ng-binding">Walking to 'FullStack'</h2>         
+    </div>
+</div>
+<div id="skills" class="row-white row content">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 pricing-header">
+                <img src="images/5e042832.tools.png" class="rotating max-width-260 img-responsive img-center" style="padding-bottom:10px">
+                <h1 class="ng-binding">Those are my skills</h1>
+            </div>
+        </div>
+        <div class="row ha-waypoint" data-animate-down="to-down" data-animate-up="to-up">
+            <div class="col-md-12">
+                <div class="row" style="padding-top:25px">
+                    <div class="col-md-3 contact-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/500b728f.html5_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">HTML5</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">HTML5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/7598172a.js_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">Javascript</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">Javascript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/29ff870f.angular_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">AngularJS</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">AngularJS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-set contact-set-end">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/ebb3d7b2.css3_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">CSS3</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">CSS3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top:25px">
+                  <div class="col-md-3 contact-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/2a1975f2.bootstrap_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">Bootstrap</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">Bootstrap</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/979bc896.nodejs_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">NodeJS</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">NodeJS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/19111df3.mongodb_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">MongoDB</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">MongoDB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-set contact-set-end">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/cfb98311.grunt_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">Grunt</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">Grunt</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="row" style="padding-top:25px">
+                  <div class="col-md-3 contact-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/c3a52ec5.yeoman_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">Yeoman</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">Yeoman</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/ec466dca.bower_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">Bower</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">Bower</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-set">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/87a10f06.gae_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">Google App Engine</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">Google App Engine</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 contact-set contact-set-end">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="images/a0789135.openshift_shield_color.png" class="img-responsive img-center contact-set-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="ng-binding">Open Shift</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="ng-binding">Open Shift</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="projects" class="row-blue row content projects">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 projects-header">
+                <img src="images/85ef63c1.rocket.png" class="shake max-width-260 img-responsive img-center" style="padding-bottom:10px">
+                <h1 class="ng-binding">Personal projects I have done.</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="media pointer" ng-click="goTo(_DUBIDUBA)">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/b929c216.plus_small.png" style="width: 64px; height: 64px">
+                    </a>
+                    <div class="media-body ng-binding">
+                        <h4 class="media-heading ng-binding">Dubi Duba web e-commerce application</h4>
+                        This is an web e-commerce application based in nodeJS, AngularJS and MongoDB with PayPal API and Flickr API integration.
+                    </div>
+                </div>
+                <div class="media pointer" ng-click="goTo(_GEKO)">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/b929c216.plus_small.png" style="width: 64px; height: 64px">
+                    </a>
+                    <div class="media-body ng-binding">
+                        <h4 class="media-heading ng-binding">Javascript</h4>
+                        Javascript
+                    </div>
+                </div>
+                <div class="media pointer" ng-click="goTo(_BOOKING)">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/b929c216.plus_small.png" style="width: 64px; height: 64px">
+                    </a>
+                    <div class="media-body ng-binding">
+                        <h4 class="media-heading ng-binding">AngularJS</h4>
+                        AngularJS                        
+                    </div>
+                </div>
+                <div class="media pointer">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/b929c216.plus_small.png" style="width: 64px; height: 64px">
+                    </a>
+                    <div class="media-body ng-binding">
+                        <h4 class="media-heading ng-binding">CSS3</h4>
+                        CSS3                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact" class="row-gray row content pricing">
+    <div class="col-md-12 pricing-header">
+        <img src="images/ae2da521.coffee.png" class="max-width-260 img-responsive img-center" style="padding-bottom:10px">
+        <h1 class="ng-binding">Do you want to contact me?</h1>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><strong class="ng-binding">Lets go!!</strong></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 contact-set pointer" ng-click="goTo(_LINKEDIN)">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/6cf94f67.linkedin.png" class="max-width-100 img-responsive img-center contact-set-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Linkedin</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 contact-set pointer" ng-click="goTo(_GOOGLEPLUS)">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/89e6fe4f.google_plus.png" class="max-width-100 img-responsive img-center contact-set-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Google Plus</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 contact-set-end pointer" ng-click="goTo(_TWITTER)">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/93742d84.twitter.png" class="max-width-100 img-responsive img-center contact-set-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Twitter</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+<div class="row footer content" id="more-info">
+    <div class="col-md-3 col-md-offset-2">
+        <div class="square photo-profile-cv"></div>
+    </div>
+    <div class="col-md-5 contact">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="ng-binding">Experiencia</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="ng-binding">Intelygenz</h3>
+                <h4 class="ng-binding">Front End Web Applications Developer</h4>
+                <h5 class="ng-binding">septiembre de 2011 – Actualidad (2 años 11 meses)</h5>
+                <p ng-bind-html="lang.translate.CURRICULUM.DESCRIPTION_01" class="ng-binding">I work as web application developer for an important bank company in Spain.<br><br>I am very responsible with the product to deliver. It means we have to apply several phases to the application building. We meet with the customer to collect right requirements and talk about diferent soluctions, and to analyze them. We use agile methods (SCRUM) to be sure that the product is following that requirements and we are always under deadline delivery. About my developer knowledge and experience, javascript is the main programation language I often use to apply in our applications. The product deploy is made over GOOGLE APP ENGINE technologies and we have to know its limitations, API's. We work with version control (SVN - GIT) and ANGULARJS framework. Now, I am testing with 'DIV' widget concept under that tecnology, encapsulating functionality, styles, images and structure in a unique 'js' file. I worked with anothers frameworks in the past. IRIS front (expert), JQUERY (expert), kendo, ... Besides working in main projects, I work in a interesting project to improve our productivity and look for a common develop line in our teams. In this way, to enhance the 'scaffolding' process or fast prototyping in the other projects I have worked with YEOMAN, GRUNT and BOWER to build diferent FRONT application generators based in ANGULARJS framework. It requires knowledges of NODEJS, and automatic deploy process (minified, concatenate, process, appcache...). And all of this enyoing my work and the people I share it. ;-)</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="ng-binding">N&amp;C Advertising</h3>
+                <h4 class="ng-binding">Web Developer</h4>
+                <h5 class="ng-binding">septiembre de 2010 – agosto de 2011 (1 año)</h5>
+                <p ng-bind-html="lang.translate.CURRICULUM.DESCRIPTION_02" class="ng-binding"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="ng-binding">Universidad de Alcalá</h3>
+                <h4 class="ng-binding">Technical support, Dpto de Geografía</h4>
+                <h5 class="ng-binding">junio de 2008 – junio de 2009 (1 año 1 mes)</h5>
+                <p ng-bind-html="lang.translate.CURRICULUM.DESCRIPTION_03" class="ng-binding"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row pop-shot">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 projects">
+            <h3 class="ng-binding">Do you want to I send you my CV by e-mail?</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form action="/Subscribe" class="form ng-pristine ng-valid" id="notifyMe" method="post">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    </span>
+                    <input type="text" name="email" class="form-control input-lg" placeholder="Mi e-mail" disabled="disabled">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success btn-lg" disabled="disabled">Envíamelo!</button>
+                    </span>
+                </div>
+                <p class="note ng-binding">Ie promise not to spam</p>
+            </form>
+        </div>
+    </div>
+</div><!-- /.container--></div></div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1024257-10', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script><script src="https://maps.gstatic.com/maps-api-v3/api/js/18/14/main.js" type="text/javascript"></script>
+    
+    <script src="scripts/4bd9da69.vendor.js"></script>
+
+        <script src="scripts/8d3d0cc0.scripts.js"></script><input id="textAngular-editableFix-010203040506070809" style="width:1px;height:1px;border:none;margin:0;padding:0;position:absolute; top: -10000; left: -10000;" unselectable="on" tabindex="-1">
+
+</body></html>
