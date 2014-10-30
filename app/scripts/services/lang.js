@@ -127,7 +127,11 @@ angular.module('eduardomarinFsApp')
 				  	, "SECONDARY_TITLE" : "Título secundario"
 				},
 				"SKILLS" : {
-				  	"MAIN" : "Skills"
+				  	"MAIN" : "Skills",
+				  	"ENTER_SKILL" : "Introduce nueva skill",
+				  	"ADD_SKILL" : "Añadir nuevo skill",
+				  	"CLICK_TO_EDIT" : "Click para editar",
+				  	"LINK" : "Enlace"
 				}
 			}
 	    },

@@ -7,6 +7,8 @@ angular.module('eduardomarinFsApp')
     $scope.postData = null;
     $scope.loading = false;
     $scope.lang = Lang;
+    $scope.newSkill = null;
+    $scope.showOtherTools = true;
 
     function _LoadUserProfile(){
     	$scope.loading = true;

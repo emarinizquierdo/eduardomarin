@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-.controller('MainCtrl', ['$rootScope', '$scope', '$window', '$timeout', '$location', 'Lang', function ($rootScope, $scope, $window, $timeout, $location, Lang) {
+.controller('MainCtrl', ['$rootScope', '$scope', '$window', '$timeout', '$http', '$location', 'Lang', 'UserProfile', function ($rootScope, $scope, $window, $timeout, $http, $location, Lang, UserProfile) {
     
     $scope._LINKEDIN = "https://www.linkedin.com/pub/eduardo-mar%C3%ADn-izquierdo/30/578/8bb";
     $scope._GOOGLEPLUS = "https://plus.google.com/u/0/+EduardoMar%C3%ADnIzquierdodeveloper/about";
@@ -11,11 +11,25 @@ angular.module('eduardomarinFsApp')
     $scope._BOOKING = "https://www.flickr.com/photos/emarin/sets/72157630576198222/";
     $scope._TWITTER = "https://twitter.com/emarinizquierdo";
 
+    $scope.userProfile = {};
 	$scope.lang = Lang;
 
 	$scope.goTo = function( p_url ){
 		$window.open(p_url);
 	}
+
+	function _LoadUserProfile(){
+    	$scope.loading = true;
+        UserProfile.get({ lang : Lang.activeLang }, function(data) {
+
+       		$scope.userProfile = data;
+
+       		$scope.loading = false;
+
+        },function(error){
+            $scope.loading = false;
+        });
+    }
 
 	var _moveToScroll = function(){
 
@@ -61,6 +75,7 @@ angular.module('eduardomarinFsApp')
 		}, { offset: '100%' } );
 	} );
 
+	_LoadUserProfile();
 	_moveToScroll();
 
 }]);

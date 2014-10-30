@@ -1,0 +1,65 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <i class="glyphicon glyphicon-wrench pull-right"></i>
+      <h4>{{lang.translate.PROFILE.SKILLS.MAIN}}</h4>
+    </div>
+  </div>
+  
+  <div class="panel-body">
+
+    <form class="form form-vertical" ng-submit="saveSkills(userProfile)">
+
+      <div class="form-group pointer green" ng-click="newSkill();">
+        <h4>{{lang.translate.PROFILE.SKILLS.ADD_SKILL}}</h4>
+      </div>
+
+      <accordion close-others="oneAtATime">
+        <accordion-group ng-repeat="skill in userProfile.skills" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" class="pointer">
+          <accordion-heading>
+            {{skill.title}}<i class="pull-right glyphicon glyphicon-remove red" ng-click="remove($index)"></i>
+          </accordion-heading>
+          <div class="panel-body">
+            <div class="form-group">
+              <label>{{lang.translate.PROFILE.MAIN.MAIN_TITLE}}</label>
+              <div class="controls">
+                <input ng-model="skill.title" type="text" class="form-control" placeholder="Enter Title">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>{{lang.translate.PROFILE.SKILLS.LINK}}</label>
+              <div class="controls">
+                <input ng-model="skill.link" type="text" class="form-control" placeholder="Enter Title">
+              </div>
+            </div>      
+            <div class="form-group">
+              <label>{{lang.translate.PROFILE.MAIN.SECONDARY_TITLE}}</label>
+              <div class="controls">
+                <textarea class="form-control" rows="2" ng-model="skill.description"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2 text-center"><img ng-src="{{skill.logo || 'http://placehold.it/80/BBBBBB/FFF'}}" class="img-rounded img-responsive align-center"></div>
+              <div class="col-xs-10 col-sm-10 col-md-10 form-group">
+                <label>{{lang.translate.PROFILE.MAIN.MAIN_TITLE}}</label>
+                <div class="controls">
+                  <input ng-model="skill.logo" type="text" class="form-control" placeholder="Enter Title">
+                </div>
+              </div>   
+            </div>
+          </div>
+        </accordion-group>
+      </accordion>
+
+      <div class="control-group">
+        <label></label>
+        <div class="controls">
+          <button type="submit" class="btn btn-primary">
+            {{lang.translate.COMMON.SAVE}}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+

@@ -2,13 +2,13 @@
 
 <div class="row home-hero content" >
     <div class="col-md-12">
-        <h1 class="main-message">{{lang.translate.MAIN.MESSAGE_01}}</h1>
+        <h1 class="main-message">{{userProfile.main.mainTitle}}</h1>
         <div class="row form" id="demoGroup">
           <div class="col-md-6 col-md-offset-3">
             <div class="circle photo-main" ></div>
           </div>
         </div>
-        <h2>{{lang.translate.MAIN.MESSAGE_02}}</h2>         
+        <h2>{{userProfile.main.secondaryTitle}}</h2>         
     </div>
 </div>
 <div id="skills" class="row-white row content">
@@ -22,23 +22,27 @@
         <div class="row ha-waypoint" data-animate-down="to-down" data-animate-up="to-up">
             <div class="col-md-12">
                 <div class="row" style="padding-top:25px;">
-                    <div class="col-md-3 contact-set">
+                    <div class="col-md-3 contact-set" ng-repeat-start="skill in userProfile.skills" ng-class="{'contact-set-end' : ($index + 1) %4 == 0 }">
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="images/html5_shield_color.png" class="img-responsive img-center contact-set-img" />
+                                <img ng-src="{{skill.logo || 'http://placehold.it/80/BBBBBB/FFF'}}" class="img-responsive img-center contact-set-img" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <h3>{{lang.translate.SKILLS.TITLE_01}}</h3>
+                                <h3>{{skill.title}}</h3>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <p>{{lang.translate.SKILLS.DESCRIPTION_01}}</p>
+                                <p>{{skill.description}}</p>
                             </div>
                         </div>
                     </div>
+                    <div class="clearfix" ng-if="($index + 1) % 4 == 0"></div>
+                        <div ng-repeat-end=""></div>
+                    </div>
+
                     <div class="col-md-3 contact-set">
                         <div class="row">
                             <div class="col-md-12">

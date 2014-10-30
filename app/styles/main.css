@@ -43,6 +43,19 @@ body{
   text-decoration: none;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+/* Colors */
+.red {
+  color : #CF3A3A!important;
+}
+
+.green {
+  color : #32A83C!important;
+}
+
 /* Fonts */
 
 .neucha {
