@@ -48,7 +48,7 @@
     </div>
 </div>
 
-<div id="projects" class="row-blue row content projects">
+<div id="projects" class="row-blue row content projects neucha">
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-12 projects-header">
@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="media pointer" ng-repeat="project in userProfile.projects" ng-click="goTo(project.link)">
-                    <a class="pull-left" href="#">
+                    <a class="pull-left" href="{{project.link}}">
                         <img class="media-object" src="images/plus_small.png" style="width: 64px; height: 64px;">
                     </a>
                     <div class="media-body">
@@ -72,7 +72,7 @@
     </div>
 </div>
 
-<div id="contact" class="row-gray row content pricing">
+<div id="contact" class="row-gray row content pricing neucha">
     <div class="col-md-12 pricing-header">
         <img src="images/coffee.png" class="max-width-260 img-responsive img-center" style="padding-bottom:10px;" />
         <h1>{{lang.translate.CONTACT.CONTACTME}}</h1>
@@ -124,7 +124,7 @@
     </div>
 </div>
         
-<div class="row footer content" id="more-info">
+<div class="row footer content neucha" id="more-info">
     <div class="col-md-3 col-md-offset-2">
         <div class="square photo-profile-cv" ></div>
     </div>
@@ -134,28 +134,12 @@
                 <h2>{{lang.translate.CURRICULUM.EXPERIENCE}}</h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row" ng-repeat="experience in userProfile.experiences">
             <div class="col-md-12">
-                <h3>{{lang.translate.CURRICULUM.EXPERIENCE_01}}</h3>
-                <h4>{{lang.translate.CURRICULUM.EXPERIENCE_DESCRIPTION_01}}</h4>
-                <h5>{{lang.translate.CURRICULUM.EXPERIENCE_DATE_01}}</h5>
-                <p ng-bind-html="lang.translate.CURRICULUM.DESCRIPTION_01"></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h3>{{lang.translate.CURRICULUM.EXPERIENCE_02}}</h3>
-                <h4>{{lang.translate.CURRICULUM.EXPERIENCE_DESCRIPTION_02}}</h4>
-                <h5>{{lang.translate.CURRICULUM.EXPERIENCE_DATE_02}}</h5>
-                <p ng-bind-html="lang.translate.CURRICULUM.DESCRIPTION_02"></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h3>{{lang.translate.CURRICULUM.EXPERIENCE_03}}</h3>
-                <h4>{{lang.translate.CURRICULUM.EXPERIENCE_DESCRIPTION_03}}</h4>
-                <h5>{{lang.translate.CURRICULUM.EXPERIENCE_DATE_03}}</h5>
-                <p ng-bind-html="lang.translate.CURRICULUM.DESCRIPTION_03"></p>
+                <h3>{{experience.company}}</h3>
+                <h4>{{experience.job}}</h4>
+                <h5>{{experience.period}}</h5>
+                <p ng-bind-html="experience.description"></p>
             </div>
         </div>
     </div>

@@ -107,6 +107,8 @@ angular.module('eduardomarinFsApp')
 			},
 			"COMMON" : {
 				  "DASHBOARD" : "Escritorio"
+				, "PROFILE" : "Mi perfil"
+				, "BLOG" : "Blog"
 				, "POSTS" : "Entradas"
 				, "POST" : "Entrada"
 				, "COMMENTS" : "Comentarios"
@@ -137,6 +139,17 @@ angular.module('eduardomarinFsApp')
 				  	"MAIN" : "Proyectos",
 				  	"ENTER_PROJECT" : "Introduce nuevo proyecto",
 				  	"ADD_PROJECT" : "Añadir nuevo proyecto",
+				  	"CLICK_TO_EDIT" : "Click para editar",
+				  	"LINK" : "Enlace"
+				},
+				"EXPERIENCES" : {
+				  	"MAIN" : "Experiencias",
+				  	"ENTER_EXPERIENCE" : "Introduce nueva experiencia",
+				  	"ADD_EXPERIENCE" : "Añadir nueva experiencia",
+				  	"COMPANY" : "Compañía",
+				  	"JOB" : "Puesto",
+				  	"PERIOD" : "Duración",
+				  	"DESCRIPTION" : "Descripción",
 				  	"CLICK_TO_EDIT" : "Click para editar",
 				  	"LINK" : "Enlace"
 				}
@@ -242,6 +255,8 @@ angular.module('eduardomarinFsApp')
 			},
 			"COMMON" : {
 				  "DASHBOARD" : "Dashboard"
+				, "PROFILE" : "My Profile"
+				, "BLOG" : "Blog"
 				, "POSTS" : "Posts"
 				, "POST" : "Post"
 				, "COMMENTS" : "Comments"
@@ -253,6 +268,38 @@ angular.module('eduardomarinFsApp')
 				, "CONTENT" : "Content"
 				, "SUBMIT" : "Submit"
 				, "SAVE" : "Save"
+			},
+			"PROFILE" : {
+				"MAIN" : {
+				  	  "MAIN" : "Principal"
+				  	, "MAIN_TITLE" : "Título principal"
+				  	, "SECONDARY_TITLE" : "Título secundario"
+				},
+				"SKILLS" : {
+				  	"MAIN" : "Skills",
+				  	"ENTER_SKILL" : "Introduce nueva skill",
+				  	"ADD_SKILL" : "Añadir nuevo skill",
+				  	"CLICK_TO_EDIT" : "Click para editar",
+				  	"LINK" : "Enlace"
+				},
+				"PROJECTS" : {
+				  	"MAIN" : "Proyectos",
+				  	"ENTER_PROJECT" : "Introduce nuevo proyecto",
+				  	"ADD_PROJECT" : "Añadir nuevo proyecto",
+				  	"CLICK_TO_EDIT" : "Click para editar",
+				  	"LINK" : "Enlace"
+				},
+				"EXPERIENCES" : {
+				  	"MAIN" : "Experiencias",
+				  	"ENTER_EXPERIENCE" : "Introduce nueva experiencia",
+				  	"ADD_EXPERIENCE" : "Añadir nueva experiencia",
+				  	"COMPANY" : "Compañía",
+				  	"JOB" : "Puesto",
+				  	"PERIOD" : "Duración",
+				  	"DESCRIPTION" : "Descripción",
+				  	"CLICK_TO_EDIT" : "Click para editar",
+				  	"LINK" : "Enlace"
+				}
 			}
 	    } 
 

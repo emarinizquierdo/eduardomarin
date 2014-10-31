@@ -1,0 +1,62 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <i class="glyphicon glyphicon-wrench pull-right"></i>
+      <h4>{{lang.translate.PROFILE.EXPERIENCES.MAIN}}</h4>
+    </div>
+  </div>
+  
+  <div class="panel-body">
+
+    <form class="form form-vertical" ng-submit="saveExperiences(userProfile)">
+
+      <div class="form-group pointer green" ng-click="newExperience();">
+        <h4>{{lang.translate.PROFILE.EXPERIENCES.ADD_EXPERIENCE}}</h4>
+      </div>
+
+      <accordion close-others="oneAtATime">
+        <accordion-group ng-repeat="experience in userProfile.experiences" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" class="pointer">
+          <accordion-heading>
+            {{experience.company}}<i class="pull-right glyphicon glyphicon-remove red" ng-click="remove($index)"></i>
+          </accordion-heading>
+          <div class="panel-body">
+            <div class="form-group">
+              <label>{{lang.translate.PROFILE.EXPERIENCES.COMPANY}}</label>
+              <div class="controls">
+                <input ng-model="experience.company" type="text" class="form-control" placeholder="Enter Title">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>{{lang.translate.PROFILE.EXPERIENCES.JOB}}</label>
+              <div class="controls">
+                <input ng-model="experience.job" type="text" class="form-control" placeholder="Enter Title">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>{{lang.translate.PROFILE.EXPERIENCES.PERIOD}}</label>
+              <div class="controls">
+                <input ng-model="experience.period" type="text" class="form-control" placeholder="Enter Title">
+              </div>
+            </div>      
+            <div class="form-group">
+              <label>{{lang.translate.PROFILE.EXPERIENCES.DESCRIPTION}}</label>
+              <div class="controls">
+                <div text-angular ng-model="experience.description"></div>
+              </div>
+            </div>
+          </div>
+        </accordion-group>
+      </accordion>
+
+      <div class="control-group">
+        <label></label>
+        <div class="controls">
+          <button type="submit" class="btn btn-primary">
+            {{lang.translate.COMMON.SAVE}}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+

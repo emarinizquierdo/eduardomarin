@@ -4,23 +4,8 @@
 <!-- Main -->
 <div class="container another-container">
 <div class="row">
-	<div class="col-md-2">
-      <!-- Left column -->
-      <a href="/admin"><strong><i class="glyphicon glyphicon-dashboard"></i> {{lang.translate.COMMON.DASHBOARD}}</strong></a>  
-      
-      <hr>
-      
-      <ul class="list-unstyled">
-        <li class="nav-header">
-            <ul class="list-unstyled collapse in" id="userMenu">
-                <li><a href="/admin/posts"><i class="glyphicon glyphicon-pencil"></i> {{lang.translate.COMMON.POSTS}}</a></li>
-                <li><a href="/admin/comments"><i class="glyphicon glyphicon-comment"></i> {{lang.translate.COMMON.COMMENTS}}</a></li>
-            </ul>
-        </li>
-        
-      </ul>
-      <hr>
-  	</div><!-- /col-3 -->
+	
+    <div admin-left-menu></div>
     <div class="col-md-10">
       
       <!-- column 2 -->	

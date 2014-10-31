@@ -1,82 +1,34 @@
 <div class="container-fluid neucha another-container" >
-<!-- Header -->
-<div style="background-color:white">
-<!-- Main -->
-<div class="container another-container">
-<div class="row">
-	<div class="col-md-2">
-      <!-- Left column -->
-      <a href="/admin"><strong><i class="glyphicon glyphicon-dashboard"></i> Dashboard</strong></a>  
-      
-      <hr>
-      
-      <ul class="list-unstyled">
-        <li class="nav-header">
-            <ul class="list-unstyled collapse in" id="userMenu">
-                <li><a href="/admin/posts"><i class="glyphicon glyphicon-pencil"></i> Posts <span class="badge badge-info">4</span></a></li>
-                <li><a href="/admin/comments"><i class="glyphicon glyphicon-comment"></i> Comments</a></li>
-            </ul>
-        </li>
+  <!-- Header -->
+  <div style="background-color:white">
+    <!-- Main -->
+    <div class="container another-container">
+      <div class="row">
         
-      </ul>
-      <hr>
-  	</div><!-- /col-3 -->
-    <div class="col-md-10">
+        <div admin-left-menu></div>
+    
+        <div class="col-md-10">
       
-      <!-- column 2 -->	
+          <!-- column 2 -->	
       
-      <a><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
+          <a>
+            <strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong>
+          </a>  
       
-      	<hr>
+          <hr>
       
-      	<div class="row">
-      		<div class="col-md-12">
-				<div class="panel panel-default">
-                	<div class="panel-heading">
-                      	<div class="panel-title">
-                  		<i class="glyphicon glyphicon-wrench pull-right"></i>
-                      	<h4>{{lang.translate.PROFILE.MAIN.MAIN}}</h4>
-                      	</div>
-                	</div>
-                	<div class="panel-body">
-
-                      <form class="form form-vertical" ng-submit="savePost(userProfile)">
-                       
-                        <div class="form-group">
-                          <label>{{lang.translate.PROFILE.MAIN.MAIN_TITLE}}</label>
-                          <div class="controls">
-                           <input ng-model="userProfile.main.mainTitle" type="text" class="form-control" placeholder="Enter Title">
-                          </div>
-                        </div>      
-                        <div class="form-group">
-                          <label>{{lang.translate.PROFILE.MAIN.SECONDARY_TITLE}}</label>
-                          <div class="controls">
-                           <input ng-model="userProfile.main.secondaryTitle" type="text" class="form-control" placeholder="Enter Title">
-                          </div>
-                        </div> 
-                        <div class="control-group">
-                          	<label></label>
-                        	<div class="controls">
-                        	<button type="submit" class="btn btn-primary">
-                            {{lang.translate.COMMON.SAVE}}
-                            </button>
-                        	</div>
-                        </div>   
-                        
-                      </form>
-
-                  </div><!--/panel content-->
-                </div><!--/panel-->
-
-                <div skills-admin-mngr user-profile="userProfile" save-handler="savePost"></div>
-
-                <div projects-admin-mngr user-profile="userProfile" save-handler="savePost"></div>                
-               </div><!--/panel-->
-
-      		</div>
-      	</div>
+          <div class="row">
+      		  <div class="col-md-12">
+              <div main-admin-mngr user-profile="userProfile" save-handler="saveMain"></div>
+              <div skills-admin-mngr user-profile="userProfile" save-handler="savePost"></div>
+              <div projects-admin-mngr user-profile="userProfile" save-handler="savePost"></div>
+              <div experiences-admin-mngr user-profile="userProfile" save-handler="savePost"></div>
+            </div><!--/panel-->
+          </div>
+        </div>
 		
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- /Main -->
