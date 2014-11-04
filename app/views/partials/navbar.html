@@ -7,32 +7,10 @@
           <div class="col-sm-12 col-md-5">
             <div class="circle photo-profile" ng-class="{'to-down' : !inMain}" ></div>
             <h1 class="main-title neucha" ng-class="{'to-down' : !inMain}">Eduardo Marín Izquierdo</h1>
-            <span class="glyphicon glyphicon-align-justify pull-right menu-icon" ng-click="toggleCollapse = !toggleCollapse"></span>
           </div>
           <div>
         <div class="col-sm-5 col-md-5 navbar-wrapper">
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div ng-class="{'collapse' : !toggleCollapse}" class="navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav header-nav" ng-click="toggleCollapse = false">
-                    <li ng-repeat="item in menu" ng-class="{'active' : activeTarget == item.target}" ng-click="setActive(item.target)"><a href="{{item.path}}" ng-if="!item.inmain">{{item.name}}</a><a href="{{item.path}}" scroll-on-click sc-target="{{item.target}}" ng-if="item.inmain">{{item.name}}</a></li>
-                    <li class="dropdown" >
-                        <a class="login-icon dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-                            <i class="glyphicon glyphicon-lock"></i>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
-                            <li ng-if="isAdmin" role="presentation"><a role="menuitem" tabindex="-1" href="/admin">{{lang.translate.MENU.ADMIN}}</a></li>
-                            <li ng-if="isAdmin" role="presentation" class="divider"></li>
-                            <li ng-if="isAdmin" role="presentation" ng-click="logout()"><a href role="menuitem" tabindex="-1">{{lang.translate.MENU.LOGOUT}}</a></li>
-                            <li ng-if="!isAdmin"role="presentation"><a href="/login" role="menuitem" tabindex="-1">{{lang.translate.MENU.LOGIN}}</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href ng-if="lang.activeLang == 'es'" ng-click="changeLang('en')"><span class="flag-icon flag-icon-es"></span></a>
-                        <a href ng-if="lang.activeLang == 'en'" ng-click="changeLang('es')"><span class="flag-icon flag-icon-gb"></span></a>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
+            <md-button ng-click="showSidebar=!showSidebar" class="pull-right menu-button"></md-button>
         </div>
     </div>         
     </div><!-- /.container-->

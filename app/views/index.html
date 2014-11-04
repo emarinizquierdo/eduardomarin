@@ -2,8 +2,11 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
@@ -15,6 +18,7 @@
     <!-- build:css(app) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
@@ -22,28 +26,44 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/material-main.css">
     <link rel="stylesheet" href="styles/css/flag-icon.min.css" />
     <!-- endbuild -->
-  </head>
-  <body ng-app="eduardomarinFsApp">
+</head>
+
+<body ng-app="eduardomarinFsApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div navbar ></div>
+    <div ng-controller="SidebarCtrl">
+        
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2" flex component-id="right">
+            <div menu show-sidebar="showSidebar"></div>
+        </md-sidenav>
+        <md-content flex>
+            <div navbar show-sidebar="showSidebar"></div>
+            <div class="site_container" ng-view=""></div>
+        </md-content>
 
-    <div class="site_container" ng-view=""></div>
-
+    </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-1024257-10', 'auto');
-        ga('send', 'pageview');
+    ga('create', 'UA-1024257-10', 'auto');
+    ga('send', 'pageview');
     </script>
 
     <!--[if lt IE 9]>
@@ -52,7 +72,7 @@
     <![endif]-->
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    
+
     <!-- build:js(app) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
@@ -64,46 +84,54 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/skrollr/src/skrollr.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/hammerjs/hammer.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="bower_components/textAngular/src/textAngular-sanitize.js"></script>
-        <script src="bower_components/textAngular/src/textAngularSetup.js"></script>
-        <script src="bower_components/textAngular/src/textAngular.js"></script>
-        
-        <script src="scripts/lib/waypoints.min.js"></script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="bower_components/textAngular/src/textAngular-sanitize.js"></script>
+    <script src="bower_components/textAngular/src/textAngularSetup.js"></script>
+    <script src="bower_components/textAngular/src/textAngular.js"></script>
 
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/building.js"></script>
-        <script src="scripts/controllers/login.js"></script>
-        <script src="scripts/controllers/blog.js"></script>
-        <script src="scripts/controllers/admin.js"></script>
-        <script src="scripts/controllers/entry.js"></script>
-        <script src="scripts/controllers/admin/post.js"></script>
-        <script src="scripts/controllers/admin/posts.js"></script>
-        <script src="scripts/controllers/admin/profile.js"></script>
-        
-        <script src="scripts/directives/skrollr.dir.js"></script>
-        <script src="scripts/directives/compile.js"></script>
-        <script src="scripts/directives/dynamicDirective.js"></script>
-        <script src="scripts/directives/scrollonclick.js"></script>
-        <script src="scripts/directives/navbar.js"></script>
-        <script src="scripts/directives/adminLeftMenu.js"></script>
-        <script src="scripts/directives/mainAdminMngr.js"></script>
-        <script src="scripts/directives/skillsAdminMngr.js"></script>
-        <script src="scripts/directives/projectsAdminMngr.js"></script>
-        <script src="scripts/directives/experiencesAdminMngr.js"></script>
+    <script src="scripts/lib/waypoints.min.js"></script>
 
-        <script src="scripts/services/lang.js"></script>
-        <script src="scripts/services/auth.js"></script>
-        <script src="scripts/services/session.js"></script>
-        <script src="scripts/services/user.js"></script>
-        <script src="scripts/services/post.js"></script>
-        
-        <script src="scripts/filters/unsafe.js"></script>
-        <!-- endbuild -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/sidebar.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/building.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/blog.js"></script>
+    <script src="scripts/controllers/admin.js"></script>
+    <script src="scripts/controllers/entry.js"></script>
+    <script src="scripts/controllers/admin/post.js"></script>
+    <script src="scripts/controllers/admin/posts.js"></script>
+    <script src="scripts/controllers/admin/profile.js"></script>
+
+    <script src="scripts/directives/skrollr.dir.js"></script>
+    <script src="scripts/directives/compile.js"></script>
+    <script src="scripts/directives/dynamicDirective.js"></script>
+    <script src="scripts/directives/scrollonclick.js"></script>
+    <script src="scripts/directives/menu.js"></script>
+    <script src="scripts/directives/navbar.js"></script>
+    <script src="scripts/directives/adminLeftMenu.js"></script>
+    <script src="scripts/directives/mainAdminMngr.js"></script>
+    <script src="scripts/directives/skillsAdminMngr.js"></script>
+    <script src="scripts/directives/projectsAdminMngr.js"></script>
+    <script src="scripts/directives/experiencesAdminMngr.js"></script>
+
+    <script src="scripts/services/lang.js"></script>
+    <script src="scripts/services/auth.js"></script>
+    <script src="scripts/services/session.js"></script>
+    <script src="scripts/services/user.js"></script>
+    <script src="scripts/services/post.js"></script>
+
+    <script src="scripts/filters/unsafe.js"></script>
+    <!-- endbuild -->
 
 </body>
+
 </html>

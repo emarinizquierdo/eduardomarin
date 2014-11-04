@@ -1,0 +1,52 @@
+<div>
+    <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">Menu</h1>
+    </md-toolbar>
+    <md-content class="md-padding">
+
+        <md-list>
+            <md-item ng-repeat="item in menu" ng-class="{'active' : activeTarget == item.target}" ng-click="setActive(item.target); closeSidebar();">
+                <md-item-content>
+                    <div class="md-tile-content">
+                        <a href="{{item.path}}" ng-if="!item.inmain">{{item.name}}</a><a href="{{item.path}}" scroll-on-click sc-target="{{item.target}}" ng-if="item.inmain">{{item.name}}</a>
+                    </div>
+                </md-item-content>
+                <md-divider></md-divider>
+            </md-item>
+            <md-item>
+                <md-item-content>
+                    <div class="md-tile-content dropdown">
+                        <a class="login-icon dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-lock"></i>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+                            <li ng-if="isAdmin" role="presentation" ng-click="closeSidebar();"><a role="menuitem" tabindex="-1" href="/admin">{{lang.translate.MENU.ADMIN}}</a>
+                            </li>
+                            <li ng-if="isAdmin" role="presentation" class="divider"></li>
+                            <li ng-if="isAdmin" role="presentation" ng-click="logout(); closeSidebar();"><a href role="menuitem" tabindex="-1">{{lang.translate.MENU.LOGOUT}}</a>
+                            </li>
+                            <li ng-if="!isAdmin" role="presentation" ng-click="closeSidebar();"><a href="/login" role="menuitem" tabindex="-1">{{lang.translate.MENU.LOGIN}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </md-item-content>
+            </md-item>
+
+            <md-item ng-click="closeSidebar();">
+                <md-item-content>
+                    <div class="md-tile-content">
+                        <a href ng-if="lang.activeLang == 'es'" ng-click="changeLang('en')">
+                            <span class="flag-icon flag-icon-es"></span>
+                        </a>
+                        <a href ng-if="lang.activeLang == 'en'" ng-click="changeLang('es')">
+                            <span class="flag-icon flag-icon-gb"></span>
+                        </a>
+                    </div>
+                </md-item-content>
+                <md-divider ng-if="!$last"></md-divider>
+            </md-item>
+        </md-list>
+
+    </md-content>
+</div>

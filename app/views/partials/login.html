@@ -1,37 +1,27 @@
 <div class="row">
-  <div class="col-sm-12">
-    <h1>Login</h1>
-  </div>
-  <div class="col-sm-12">
-    <form class="form" name="form" ng-submit="login(form)" novalidate>
 
-      <div class="form-group">
-        <label>Email</label>
+    <div class="col-sm-12">
+        <h1>Login</h1>
+    </div>
 
-        <input type="text" name="email" class="form-control" ng-model="user.email">
-      </div>
+    <div layout="horizontal" layout-fill layout-align="center center">
 
-      <div class="form-group">
-        <label>Password</label>
-        
-        <input type="password" name="password" class="form-control" ng-model="user.password">
-      </div>
+        <md-card>
+            <div layout="vertical" layout-fill>
+                <md-content class="text-fields">
+                    <form style="padding: 20px;" ng-submit="login(form)">
+                        <div layout="horizontal" layout-padding="30" layout-align="start center" class="row">
+                            <md-text-float label="eMail" ng-model="user.email" type="email"></md-text-float>
+                            <md-text-float label="Password" ng-model="user.password" type="password" class="long"></md-text-float>
+                        </div>
+                        <div layout="vertical" layout-padding="30" layout-fill>
+                            <md-button class="md-raised md-primary" type="submit">Inicia sesión</md-button>
+                        </div>
+                    </form>
+                </md-content>
+            </div>
+        </md-card>
 
-      <div class="form-group has-error">
-        <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
-           Por favor, introduce tu email y contraseña.
-        </p>              
-        <p class="help-block">{{ errors.other }}</p>
-      </div>
+    </div>
 
-      <button type="submit" class="btn btn-lg btn-primary"> Inicia sesión </button>
-    </form>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-12">
-    <hr>
-    Todavía no estás registrado? <a href="/signup" class="text-center new-account">Crear una cuenta.</a>
-  </div>
 </div>

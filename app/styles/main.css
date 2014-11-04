@@ -16,7 +16,7 @@ html {
 
 body{    
     background-color:#ffffff;
-    font-family: 'Open Sans','Helvetia Neue',sans-serif;    
+    overflow-x: hidden;       
 }
 
 .row {
@@ -63,17 +63,17 @@ body{
 /* Fonts */
 
 .neucha {
-  font-family: 'Neucha', cursive;
+  
 }
 
 .amatic{
-  font-family: 'Amatic SC', cursive;
+  
 }
 
 /* Commons */
 
 .neucha h1, .neucha h2, .neucha h3, .neucha h4, .neucha h5 {
-  font-family: 'Neucha', cursive;
+  
 }
 
 .max-width-100 {
@@ -317,6 +317,34 @@ body{
 
 }
 
+.md-sidenav-backdrop {
+  z-index: 200;
+}
+
+.md-sidenav-right {
+  position: fixed;
+  margin-top: 0px;
+  z-index: 200;
+}
+
+.menu-button {
+  background-image: url("//material-design.storage.googleapis.com/images/hamburger.svg");
+  /* background: transparent center center no-repeat; */
+  background-size: 48px 28px;
+  border: 0;
+  display: block;
+  height: 48px;
+  overflow: hidden;
+  text-indent: -9999px;
+  top: 8px;
+  width: 48px;
+  height: 40px;
+  z-index: 2;
+  right: 0;
+  background-position: 0px;
+  margin: 10px 20px;
+}
+
 /* Containers */
 
 .site_container {
@@ -353,6 +381,10 @@ body{
 
 
 /* Blog */
+.blog-body {
+  margin-top: 70px;
+}
+
 .panel-body {
   overflow: hidden;
 }
@@ -414,7 +446,6 @@ body{
         font-weight: normal;
         letter-spacing: 2px;
         line-height: 1.1;
-        text-shadow: 0 2px 2px #C23131;
     }
     .footer .contact{
         padding:15px;
@@ -485,7 +516,6 @@ body{
         font-size: 30px;
         letter-spacing: 2px;
         line-height: 1.1;
-        text-shadow: 0 2px 2px #C23131;;
     }
 
     .contact{
@@ -530,7 +560,6 @@ body{
         font-size: 50px;
         letter-spacing: 2px;
         line-height: 1.1;
-        text-shadow: 0 2px 2px #C23131;
     }
 
     .footer .contact{
@@ -573,7 +602,12 @@ body{
   padding-top: 35px;
   background-color: #E5E5E5;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+}
+
+.post-card {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .small-post {
@@ -688,7 +722,6 @@ body{
 
 .home-hero h2 {   
     font-size: 40px;
-    text-shadow: 0 2px 2px #C23131;
 }  
 
 .row-white{
