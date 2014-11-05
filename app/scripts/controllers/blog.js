@@ -1,18 +1,23 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-  .controller('BlogCtrl', function ($rootScope, $scope, $location, $http, $sanitize, Auth, Post, Lang) {
+  .controller('BlogCtrl', function ($rootScope, $scope, $location, $http, $sanitize, $routeParams, Auth, Post, Lang) {
 
     $scope.posts = [];
     $scope.postData = null;
+    $scope.limit = 12;
     $scope.offset = 0;
     $scope.readedAll = false;
     $scope.loading = false;
     $scope.lang = Lang;
 
-    function _LoadPost(){
+    function _LoadPosts( p_offset, p_limit ){
+
+        var _offset = p_offset || $scope.offset,
+            _limit = p_limit || $scope.limit;
+
         $scope.loading = true;
-        Post.get({numPosts:20, cursor: $scope.offset}, function(data) {
+        Post.get({ cursor: _offset, numPosts: _limit }, function(data) {
        		
             $scope.posts = $scope.posts.concat(data.data);
             
@@ -20,7 +25,8 @@ angular.module('eduardomarinFsApp')
 
             $scope.posts.total = data.total;
             $scope.offset += $scope.posts.length;
-            
+            $scope.limit = _limit;
+
             if($scope.offset >= $scope.posts.total){
                 $scope.readedall = true;
             }
@@ -86,6 +92,11 @@ angular.module('eduardomarinFsApp')
 
     }
 
-    _LoadPost();
+    if($routeParams.offset && $routeParams.limit){
+        _LoadPosts($routeParams.offset, $routeParams.limit);
+    }else{
+        _LoadPosts();
+    }
+    
 
   });

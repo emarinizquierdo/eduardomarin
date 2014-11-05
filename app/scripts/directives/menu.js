@@ -76,6 +76,10 @@ angular.module('eduardomarinFsApp')
           $scope.showSidebar = false;
         }
 
+        $scope.goTo = function( p_data ){
+          $location.path(p_data); 
+        }
+
         // Redirect to login if route requires auth and you're not logged in
         $rootScope.$on('$routeChangeStart', function (event, next) {
           $scope.inMain = ($location.$$path == '/');		

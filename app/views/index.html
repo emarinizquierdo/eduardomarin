@@ -38,15 +38,17 @@
 
     <!-- Add your site or application content here -->
     <div ng-controller="SidebarCtrl">
-        
-        <md-sidenav class="md-sidenav-right md-whiteframe-z2" flex component-id="right">
-            <div menu show-sidebar="showSidebar"></div>
-        </md-sidenav>
-        <md-content flex>
-            <div navbar show-sidebar="showSidebar"></div>
-            <div class="site_container" ng-view=""></div>
-        </md-content>
-
+        <section layout="horizontal">
+            <div layout="vertical" layout-fill flex="100" flex-lg="90">
+                <md-content scroll-y flex>
+                    <div navbar show-sidebar="showSidebar"></div>
+                    <div class="site_container" ng-view=""></div>
+                </md-content>
+            </div>
+            <md-sidenav layout="vertical" class="sidebar md-sidenav-right md-whiteframe-z2" flex="30" flex-lg="10" component-id="right" is-locked-open="$media('lg')">
+                <div menu show-sidebar="showSidebar"></div>
+            </md-sidenav>
+        </section>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>

@@ -279,7 +279,6 @@ body{
 .photo-profile {
   position: absolute;
   top: -4px;
-  left: 0px;
   background-image: url('/images/photo_profile.jpg');
   width: 76px;
   height: 76px;
@@ -322,9 +321,13 @@ body{
 }
 
 .md-sidenav-right {
-  position: fixed;
+  position: fixed!important;
   margin-top: 0px;
   z-index: 200;
+}
+
+.sidebar.md-sidenav-right.md-locked-open {
+  left: 90%;
 }
 
 .menu-button {
@@ -385,6 +388,12 @@ body{
   margin-top: 70px;
 }
 
+.posts-container {
+  max-width: 1278px;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap ;
+}
+
 .panel-body {
   overflow: hidden;
 }
@@ -416,7 +425,6 @@ body{
 
     .main-title,
     .main-title.to-up {
-      text-align: center;
       font-size: 30px;
       margin-right:35px;
     }
@@ -469,12 +477,10 @@ body{
 @media (min-width:768px) and (max-width:992px) {
 
     .main-title {
-      text-align: center;
     }
 
     .main-title.to-down {
       text-align: left;
-      margin-left:130px;
     }
 
     .photo-profile.to-down {

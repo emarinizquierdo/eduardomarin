@@ -23,7 +23,11 @@ angular.module('eduardomarinFsApp', [
       templateUrl: 'partials/building',
       controller: 'BuildingCtrl'
     })
-    .when('/blog', {
+    .when('/blog/', {
+      templateUrl: 'partials/blog',
+      controller: 'BlogCtrl'
+    })
+    .when('/blog/:offset/:limit', {
       templateUrl: 'partials/blog',
       controller: 'BlogCtrl'
     })
