@@ -15,7 +15,7 @@ html {
 }
 
 body{    
-    background-color:#ffffff;
+    background-color:#EAEAEA;
     overflow-x: hidden;       
 }
 
@@ -49,6 +49,10 @@ body{
 
 .list-padding {
   padding-left: 18px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 /* Colors */
@@ -248,7 +252,7 @@ body{
 }
 
 .main-title.to-down {
-  font-size: 28px;
+  font-size: 24px;
   margin-left: 87px;
 }
 
@@ -412,7 +416,7 @@ body{
 }
 
 .image-post-wrapper {
-  max-height: 260px;
+  height: 160px;
   overflow: hidden;
 }
 
@@ -420,12 +424,58 @@ body{
   width: 100%;
 }
 
+.no-image-post {
+  width: 100%;
+  height: 100%;
+  background-color: #212121;
+  color: #EEEEEE;
+  padding: 20px;
+  text-align: center;
+}
+
+.in-no-image-post {
+  width: 80%;
+  height:100px;
+  background-color: #035988;
+}
+
+.post-date {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 5px;
+  color: #CCC;
+}
+
+.posts-container .panel-thumbnail h3 a {
+  color: #CCC;
+  text-decoration: none;
+}
+
+.posts-container .panel-heading h3 a {
+  color: #333333;
+  text-decoration: none;
+}
+
+md-content {
+  background-color: #EAEAEA!important;
+}
+
+md-card {
+  padding: 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-top: 30px;
+  overflow: hidden;
+  height: 340px;
+  background-color: #ffffff;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (max-width:767px) {
 
     .main-title,
     .main-title.to-up {
-      font-size: 30px;
+      font-size: 24px;
       margin-right:35px;
     }
 
@@ -599,14 +649,14 @@ body{
 
 .another-container {
   padding-top: 60px;
-  background-color: #E5E5E5;
+  background-color: #EAEAEA;
   width: 100%;
   height: 100%;
 }
 
 .another-container .container {
   padding-top: 35px;
-  background-color: #E5E5E5;
+  background-color: #EAEAEA;
   width: 100%;
   min-height: 100%;
 }

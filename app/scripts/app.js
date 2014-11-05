@@ -27,7 +27,7 @@ angular.module('eduardomarinFsApp', [
       templateUrl: 'partials/blog',
       controller: 'BlogCtrl'
     })
-    .when('/blog/:offset/:limit', {
+    .when('/blog/page/:offset/:limit', {
       templateUrl: 'partials/blog',
       controller: 'BlogCtrl'
     })

@@ -7,14 +7,17 @@ angular.module('eduardomarinFsApp')
     $scope.postData = null;
     $scope.limit = 12;
     $scope.offset = 0;
+    $scope.backOffset = 0;
+    $scope.nextOffset = 0;
     $scope.readedAll = false;
     $scope.loading = false;
     $scope.lang = Lang;
 
     function _LoadPosts( p_offset, p_limit ){
 
-        var _offset = p_offset || $scope.offset,
-            _limit = p_limit || $scope.limit;
+        var _offset = parseInt(p_offset) || $scope.offset,
+            _limit = parseInt(p_limit) || $scope.limit,
+            _NextLimit;
 
         $scope.loading = true;
         Post.get({ cursor: _offset, numPosts: _limit }, function(data) {
@@ -24,10 +27,13 @@ angular.module('eduardomarinFsApp')
             $scope.posts = _preformat($scope.posts);
 
             $scope.posts.total = data.total;
-            $scope.offset += $scope.posts.length;
-            $scope.limit = _limit;
 
-            if($scope.offset >= $scope.posts.total){
+            $scope.backOffset = ((_offset - _limit) < 0) ? 0 : (_offset - _limit);
+            _offset += $scope.posts.length;
+            _NextLimit = _offset;
+            $scope.nextOffset = (_NextLimit > $scope.posts.total) ? $scope.posts.total : _NextLimit;
+
+            if(_offset >= $scope.posts.total){
                 $scope.readedall = true;
             }
 
