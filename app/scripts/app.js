@@ -7,7 +7,8 @@ angular.module('eduardomarinFsApp', [
   'ngRoute',
   'textAngular',
   'ui.bootstrap',
-  'ngMaterial'
+  'ngMaterial',
+  'angularUtils.directives.dirDisqus'
 ])
 .config(function ($routeProvider, $locationProvider, $httpProvider) {
   $routeProvider

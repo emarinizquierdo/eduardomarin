@@ -1,42 +1,58 @@
-<div class="container-fluid neucha another-container" >
-<!-- Header -->
-<div >
-<!-- Main -->
-<div class="container another-container">
-<div class="row">
-	
-    <div admin-left-menu></div>
-    <div class="col-md-10">
-      
-      <!-- column 2 -->	
-      	<div class="row">
-      		<div class="col-md-12">
-				<div class="panel panel-default">
-                	<div class="panel-heading">
-                      	<div class="panel-title">
-                      		<span class="badge badge-primary pull-right">{{posts.total}}</span>
-                      		<h4>{{lang.translate.COMMON.POSTS}}</h4>
-                      	</div>
-                	</div>
-                	<div class="panel-body">
+<div class="container-fluid neucha another-container">
+    <!-- Header -->
+    <div>
+        <!-- Main -->
+        <div class="container another-container">
+            <div class="row">
 
-						<table class="table table-striped">
-						<thead>
-							<tr><th>{{lang.translate.COMMON.TITLE}}</th><th>{{lang.translate.COMMON.DATE}}</th><th></th><th></th></tr>
-						</thead>
-							<tbody>
-							<tr ng-repeat="post in posts"><td><a href ng-click="goTo('/blog/entry/' + post._id)">{{post.title}}</a></td><td>{{post.date | date}}</td><td><a href ng-click="goTo('/admin/post/' + post._id)" class="glyphicon glyphicon-pencil"></a></td><td><a href ng-click="DeletePost(post._id)" class="glyphicon glyphicon-trash color-red"></a></td></tr>
-							</tbody>
-						</table>
-						<div class="text-center" ng-if="loading"><span class="glyphicon glyphicon-refresh pull-center spinner"></span></div>
-						<button type="button" class="btn btn-default col-md-12" ng-if="!readedall && !loading" ng-click="loadMore()">{{lang.translate.COMMON.LOADMORE}}s</button>
-                	</div><!--/panel content-->
-                </div><!--/panel-->
-      		</div>
-      	</div>
-		
-     
-</div>
-</div>
-</div>
-<!-- /Main -->
+                <div admin-left-menu></div>
+                <div class="col-md-10">
+                    <md-card layout-padding>
+                        <!-- column 2 -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">
+                                            <span class="badge badge-primary pull-right">{{posts.total}}</span>
+                                            <h4>{{lang.translate.COMMON.POSTS}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>{{lang.translate.COMMON.TITLE}}</th>
+                                                    <th>{{lang.translate.COMMON.DATE}}</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="post in posts">
+                                                    <td><a href ng-click="goTo('/blog/entry/' + post._id)">{{post.title}}</a>
+                                                    </td>
+                                                    <td>{{post.date | date}}</td>
+                                                    <td>
+                                                        <a href ng-click="goTo('/admin/post/' + post._id)" class="glyphicon glyphicon-pencil"></a>
+                                                    </td>
+                                                    <td>
+                                                        <a href ng-click="DeletePost(post._id)" class="glyphicon glyphicon-trash color-red"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="text-center" ng-if="loading">
+                                            <span class="glyphicon glyphicon-refresh pull-center spinner"></span>
+                                        </div>
+                                        <button type="button" class="btn btn-default col-md-12" ng-if="!readedall && !loading" ng-click="loadMore()">{{lang.translate.COMMON.LOADMORE}}s</button>
+                                </div>
+                                <!--/panel-->
+                            </div>
+                        </div>
+                    </md-card>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Main -->

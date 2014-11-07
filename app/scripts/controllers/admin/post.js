@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-.controller('AdminPostCtrl', function ($scope, $http, $location, $routeParams, Auth, Post, Lang) {
+.controller('AdminPostCtrl', function ($scope, $http, $location, $routeParams, Auth, Post, Lang, Utils) {
 
     $scope.hasSession = false;
     $scope.errors = {};
@@ -30,8 +30,12 @@ angular.module('eduardomarinFsApp')
 
   	$scope.savePost = function(p_data){
 
+        p_data.tags = (p_data.stringTags == "") ? [] : p_data.stringTags.split(",");
+        for(var _i=0; _i < p_data.tags.length; _i++){
+            p_data.tags[_i] = Utils.amigable(p_data.tags[_i].trim());
+        }
   		p_data.date = $scope.dt.getTime();
-
+        p_data.permalink = Utils.amigable(p_data.title);
         if($routeParams.id){
             Post.update(p_data, _OnSuccess, _OnError);
         }else{
@@ -52,6 +56,7 @@ angular.module('eduardomarinFsApp')
         if($routeParams.id){
             $http.get('/api/post/' + $routeParams.id).success(function(post) {
            		$scope.postData = post;
+                $scope.postData.stringTags = post.tags.join(", ").replace(/-/g, " ");
            		$scope.dt = new Date($scope.postData.date);
             }).error(function(error){
                 

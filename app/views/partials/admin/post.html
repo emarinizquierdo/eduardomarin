@@ -1,91 +1,113 @@
-<div class="container-fluid neucha another-container" >
-<!-- Header -->
-<div >
-<!-- Main -->
-<div class="container">
-<div class="row">
-	<div class="col-md-2">
-      <!-- Left column -->
-      <a href="/admin"><strong><i class="glyphicon glyphicon-dashboard"></i> {{lang.translate.COMMON.DASHBOARD}}</strong></a>  
-      
-      <hr>
-      
-      <ul class="list-unstyled">
-        <li class="nav-header">
-            <ul class="list-unstyled collapse in" id="userMenu">
-                <li><a href="/admin/posts"><i class="glyphicon glyphicon-pencil"></i> {{lang.translate.COMMON.POSTS}} <span class="badge badge-info">4</span></a></li>
-                <li><a href="/admin/comments"><i class="glyphicon glyphicon-comment"></i> {{lang.translate.COMMON.COMMENTS}}</a></li>
-            </ul>
-        </li>
-        
-      </ul>
-      <hr>
-  	</div><!-- /col-3 -->
-    <div class="col-md-10">
-      
-      <!-- column 2 -->	
-      
-      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> {{lang.translate.COMMON.MYDASHBOARD}}</strong></a>  
-      
-      	<hr>
-      
-      	<div class="row">
-      		<div class="col-md-12">
-				<div class="panel panel-default">
-                	<div class="panel-heading">
-                      	<div class="panel-title">
-                  		<i class="glyphicon glyphicon-wrench pull-right"></i>
-                      	<h4>{{lang.translate.COMMON.EDITPOST}}</h4>
-                      	</div>
-                	</div>
-                	<div class="panel-body">
+<div class="container-fluid neucha another-container">
+    <!-- Header -->
+    <div>
+        <!-- Main -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <!-- Left column -->
+                    <a href="/admin">
+                        <strong><i class="glyphicon glyphicon-dashboard"></i> {{lang.translate.COMMON.DASHBOARD}}</strong>
+                    </a>
 
-                      <form class="form form-vertical" ng-submit="savePost(postData)">
-                       
-                        <div class="control-group">
-                          <label>{{lang.translate.COMMON.TITLE}}</label>
-                          <div class="controls">
-                           <input ng-model="postData.title" type="text" class="form-control" placeholder="Enter Title">
-                          </div>
+                    <hr>
+
+                    <ul class="list-unstyled">
+                        <li class="nav-header">
+                            <ul class="list-unstyled collapse in" id="userMenu">
+                                <li><a href="/admin/posts"><i class="glyphicon glyphicon-pencil"></i> {{lang.translate.COMMON.POSTS}} <span class="badge badge-info">4</span></a>
+                                </li>
+                                <li><a href="/admin/comments"><i class="glyphicon glyphicon-comment"></i> {{lang.translate.COMMON.COMMENTS}}</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <hr>
+                </div>
+                <!-- /col-3 -->
+                <div class="col-md-10">
+
+                    <!-- column 2 -->
+
+                    <a href="#">
+                        <strong><i class="glyphicon glyphicon-dashboard"></i> {{lang.translate.COMMON.MYDASHBOARD}}</strong>
+                    </a>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <i class="glyphicon glyphicon-wrench pull-right"></i>
+                                        <h4>{{lang.translate.COMMON.EDITPOST}}</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+
+                                    <form class="form form-vertical" ng-submit="savePost(postData)">
+
+                                        <div class="control-group">
+                                            <label>{{lang.translate.COMMON.TITLE}}</label>
+                                            <div class="controls">
+                                                <input ng-model="postData.title" type="text" class="form-control" placeholder="Enter Title">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>{{lang.translate.COMMON.DATE}}</label>
+                                            <div class="controls">
+                                                <p class="input-group">
+                                                    <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" />
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i>
+                                                        </button>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>{{lang.translate.COMMON.MAIN_IMAGE}}</label>
+                                            <div class="controls">
+                                                <input ng-model="postData.mainImg" type="text" class="form-control" placeholder="Enter Main Image Url">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>{{lang.translate.COMMON.TAGS}}</label>
+                                            <div class="controls">
+                                                <input ng-model="postData.stringTags" type="text" class="form-control" placeholder="Introduce tags separadas por comas">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>{{lang.translate.COMMON.CONTENT}}</label>
+                                            <div class="controls">
+                                                <div text-angular ng-model="postData.body"></div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                            <label></label>
+                                            <div class="controls">
+                                                <button type="submit" class="btn btn-primary">
+                                                    {{lang.translate.COMMON.SAVE}}
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+
+                                </div>
+                                <!--/panel content-->
+                            </div>
+                            <!--/panel-->
                         </div>
-                        <div class="control-group">   
-	                        <label>{{lang.translate.COMMON.DATE}}</label>
-						        <div class="controls">
-						            <p class="input-group">
-										<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened"/>
-										<span class="input-group-btn">
-										<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-										</span>
-						            </p>
-						        </div>
-						</div>
-                        <div class="control-group">
-                          <label>{{lang.translate.COMMON.CONTENT}}</label>
-                          <div class="controls">
-                          	<div text-angular ng-model="postData.body"></div>
-                          	
-                          </div>
-                        </div> 
+                    </div>
 
-                        <div class="control-group">
-                          	<label></label>
-                        	<div class="controls">
-                        	<button type="submit" class="btn btn-primary">
-                              {{lang.translate.COMMON.SAVE}}
-                            </button>
-                        	</div>
-                        </div>   
-                        
-                      </form>
-                
-                
-                  </div><!--/panel content-->
-                </div><!--/panel-->
-      		</div>
-      	</div>
-		
-     
-</div>
-</div>
-</div>
-<!-- /Main -->
+
+                </div>
+            </div>
+        </div>
+        <!-- /Main -->

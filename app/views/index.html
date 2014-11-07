@@ -19,7 +19,6 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="bower_components/angular-material/themes/light-blue-dark-theme.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
@@ -29,6 +28,9 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/material-main.css">
     <link rel="stylesheet" href="styles/css/flag-icon.min.css" />
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "07f61ffb-4447-4e21-8a94-1f98f2faa28b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
     <!-- endbuild -->
 </head>
 
@@ -41,7 +43,7 @@
     <div ng-controller="SidebarCtrl">
         <section layout="horizontal">
             <div layout="vertical" layout-fill flex="100" flex-lg="90" layout-align="center center">
-                <md-content class="overflow-hidden">
+                <md-content layout-fill class="overflow-hidden">
                     <div navbar show-sidebar="showSidebar"></div>
                     <div class="site_container" ng-view=""></div>
                 </md-content>
@@ -118,6 +120,7 @@
     <script src="scripts/directives/compile.js"></script>
     <script src="scripts/directives/dynamicDirective.js"></script>
     <script src="scripts/directives/scrollonclick.js"></script>
+    <script src="scripts/directives/postPreview.js"></script>
     <script src="scripts/directives/menu.js"></script>
     <script src="scripts/directives/navbar.js"></script>
     <script src="scripts/directives/adminLeftMenu.js"></script>
@@ -125,12 +128,14 @@
     <script src="scripts/directives/skillsAdminMngr.js"></script>
     <script src="scripts/directives/projectsAdminMngr.js"></script>
     <script src="scripts/directives/experiencesAdminMngr.js"></script>
+    <script src="scripts/directives/dirDisqus.js"></script>
 
     <script src="scripts/services/lang.js"></script>
     <script src="scripts/services/auth.js"></script>
     <script src="scripts/services/session.js"></script>
     <script src="scripts/services/user.js"></script>
     <script src="scripts/services/post.js"></script>
+    <script src="scripts/services/utils.js"></script>
 
     <script src="scripts/filters/unsafe.js"></script>
     <!-- endbuild -->

@@ -1,0 +1,45 @@
+<md-card layout="vertical" flex="100" flex-sm="40" flex-md="30" flex-lg="20">
+
+    <div layout="vertical" layout-fill layout-align="space-between">
+
+        <div flex class="panel-thumbnail image-post-wrapper">
+
+            <a href="/blog/entry/{{post.permalink}}" ng-if="post.mainImg">
+                <img ng-src="{{post.mainImg}}" class="image-post img-responsive">
+            </a>
+
+            <div layout="horizontal" layout-fill layout-align="center center" ng-if="!post.mainImg" class="no-image-post" ng-style="{ 'background-color' : randomColor.background }">
+
+                <h3><a href="/blog/entry/{{post.permalink}}" ng-style="{ 'color' : randomColor.color }">{{post.title}}</a>
+                </h3>
+
+            </div>
+
+        </div>
+
+        <div flex layout="vertical" layout-align="start start" class="panel-header">
+
+            <div layout="horizontal" layout-fill layout-align="space-between">
+
+                <div class="post-date">{{post.date | date}}</div>
+                <a ng-if="isAdmin" href="admin/post/{{post.permalink}}" class="edit-post glyphicon glyphicon-pencil pull-right"></a>
+
+            </div>
+            <div>
+                <h3>
+                    <a href="/blog/entry/{{post.permalink}}">{{post.title}}</a>
+                </h3>
+            </div>
+        </div>
+        <footer class="post-preview-footer">
+            <div layout="horizontal" layout-fill layout-align="start end">
+                <div class="post-author-photo"></div>
+                <div flex class="tags" >
+                    <a href="/blog/tag/{{tag}}" class="tag" ng-repeat="tag in post.tags">{{tag}}</a>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+</md-card>

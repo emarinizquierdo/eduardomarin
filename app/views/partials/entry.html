@@ -1,25 +1,50 @@
-<div class="container-fluid another-container" >
+<div class="entry-container container-fluid another-container" layout="horizontal" flex="80" layout-fill layout-align="space-around">
 
-<!--main-->
-<div class="container" id="main" >
+    <md-card flex class="entry-card rounded no-padding overflow-hidden">
 
-  <div class="row">
-  	<div class="col-md-12 ha-waypoint" data-animate-down="to-down" data-animate-up="to-up">
-		<h2 class="inline">{{postData.title}}</h2>
-    </div>
-    <div class="col-md-12">
-      <div class="text-center" ng-if="loading"><span class="glyphicon glyphicon-refresh pull-center spinner"></span></div>
-    	<div class="panel panel-default" ng-if="!loading">
-   			<div class="panel-body">
-              <span class="pull-right"><span class="glyphicon glyphicon-time"></span>{{postData.date | date}}</span>
-              <div class="clearfix"></div>
-              <hr>
-              <div compile="postData.body" ></div>
+        <div flex layout-fill class="panel-thumbnail image-post-wrapper">
+
+            <a href="/blog/entry/{{postData._id}}" ng-if="postData.mainImg">
+                <img ng-src="{{postData.mainImg}}" class="image-post img-responsive">
+            </a>
+
+            <div layout="horizontal" layout-fill layout-align="center center" ng-if="!postData.mainImg" class="no-image-post" ng-style="{ 'background-color' : randomColor.background }">
+
+                <h1><a href="/blog/entry/{{postData._id}}" ng-style="{ 'color' : randomColor.color }">{{postData.title}}</a>
+                </h1>
+
+            </div>
+
         </div>
-        <div id="disqus_thread"></div>
-      </div>
-      
-    </div>
-  </div>
-</div><!--/main-->
+
+        <div layout="vertical" flex class="entry-body padding-30">
+            <h1>{{postData.title}}</h1>
+            <div class="panel-body">
+                <div layout="horizontal" layout-align="start start" class="post-info">
+                    <div class="date">
+                        <span class="date-icon glyphicon glyphicon-time"></span>{{postData.date | date}}
+                    </div>
+                    <div class="tags" layout="horizontal" layout-align="start start">
+                        <span ng-show="postData.tags.length > 0" class="tags-icon glyphicon glyphicon-tags"></span>
+                        <a href="/blog/tag/{{tag}}" class="tag" ng-repeat="tag in postData.tags">{{tag}}</a>
+                    </div>
+                </div>
+                <div layout="horizontal" layout-align="center center">
+                    <span class='st_googleplus_large' displayText='Google +'></span>
+                    <span class='st_linkedin_large' displayText='LinkedIn'></span>
+                    <span class='st_facebook_large' displayText='Facebook'></span>
+                    <span class='st_twitter_large' displayText='Tweet'></span>
+                    <span class='st_pinterest_large' displayText='Pinterest'></span>
+                </div>
+                <hr>
+                <div compile="postData.body"></div>
+            </div>
+        </div>
+
+        <dir-disqus disqus-shortname="eduardomarines" disqus-identifier="{{postData._id}}" disqus-url="{{url}}" ready-to-bind="{{contentLoaded}}">
+        </dir-disqus>
+
+    </md-card>
+
+
 </div>

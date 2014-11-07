@@ -2,7 +2,7 @@
     <md-toolbar class="md-theme-light">
         <h1 class="md-toolbar-tools">Menu</h1>
     </md-toolbar>
-    <md-content class="md-padding">
+    <md-content class="md-padding sidebar-content">
 
         <md-list>
             <md-item ng-repeat="item in menu" class="pointer" ng-class="{'active' : activeTarget == item.target}" ng-click="goTo(item.path); setActive(item.target); closeSidebar();">
