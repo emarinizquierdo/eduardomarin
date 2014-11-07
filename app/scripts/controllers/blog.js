@@ -20,7 +20,7 @@ angular.module('eduardomarinFsApp')
             _NextLimit;
 
         $scope.loading = true;
-        Post.get({ cursor: _offset, numPosts: _limit }, function(data) {
+        Post.get({ cursor: _offset, numPosts: _limit, published : true }, function(data) {
        		
             $scope.posts = $scope.posts.concat(data.data);
             

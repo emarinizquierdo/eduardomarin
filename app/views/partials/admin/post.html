@@ -48,7 +48,9 @@
                                 <div class="panel-body">
 
                                     <form class="form form-vertical" ng-submit="savePost(postData)">
-
+                                        <md-switch ng-model="postData.published" aria-label="Switch 2" ng-true-value="'Si'" ng-false-value="'No'">
+                                            Publicado: {{ postData.published }}
+                                        </md-switch>
                                         <div class="control-group">
                                             <label>{{lang.translate.COMMON.TITLE}}</label>
                                             <div class="controls">

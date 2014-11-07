@@ -75,6 +75,8 @@ angular.module('eduardomarinFsApp')
 		}, { offset: '100%' } );
 	} );
 
+	$scope.$watch('lang.activeLang', _LoadUserProfile);
+	
 	_LoadUserProfile();
 	_moveToScroll();
 

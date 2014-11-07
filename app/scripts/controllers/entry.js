@@ -18,7 +18,7 @@ angular.module('eduardomarinFsApp')
                 }, function(data) {
                     $scope.loading = false;
                     $scope.postData = data;
-                    $window.document.title = "Eduardo Marín Izquierdo " + "- " + $scope.postData.title;
+                    $window.document.title = $scope.postData.title + "- " + "Eduardo Marín Izquierdo ";
                     $scope.contentLoaded = true;
                 }, function(error) {
                     $scope.loading = false;
