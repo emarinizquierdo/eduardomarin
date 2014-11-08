@@ -50,6 +50,12 @@ body {
 .no-padding {
     padding: 0;
 }
+.margin-15 {
+  margin: 7px 15px;
+}
+.margin-30 {
+  margin: 15px 30px;
+}
 .padding-15 {
     padding: 15px;
 }
@@ -372,6 +378,14 @@ body {
 .blog-body {
     margin-top: 70px;
 }
+.tags-whiteframe {
+  background-color: #F44336;
+  color: #ffffff;
+}
+.delete-tag {
+  font-size: 22px;
+  color: #ffffff;
+}
 .posts-container {
     max-width: 1278px;
     -webkit-flex-wrap: wrap;
@@ -495,6 +509,9 @@ body {
 }
 md-content {
     background-color: #EAEAEA!important;
+}
+md-progress-circular.md-default-theme .md-inset {
+  background-color: #EAEAEA;
 }
 .blog-body md-card {
     padding: 0;

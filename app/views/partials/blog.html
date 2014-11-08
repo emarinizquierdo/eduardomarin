@@ -1,4 +1,10 @@
 <div class="blog-body" layout="vertical" layout-fill layout-align="center center">
+    <div ng-if="tag" layout="horizontal" layout-fill>
+        <md-whiteframe flex layout-fill class="tags-whiteframe md-whiteframe-z1 margin-30 padding-15 rounded" layout layout-align="space-between center">
+            <h3>Entradas etiquetadas con: {{tag}}</h3>
+            <a href="/blog/"><span class="delete-tag glyphicon glyphicon-remove"></span></a>
+        </md-whiteframe>
+    </div>
     <div layout="vertical" layout-fill layout-sm="horizontal" class="posts-container" layout-align="space-around">
 
         <div post-preview ng-repeat="post in posts"></div>
@@ -7,12 +13,21 @@
             <md-progress-circular mode="indeterminate"></md-progress-circular>
         </div>
 
-        <div layout="horizontal" layout-fill layout-padding layout-align="space-between" ng-if="!loading">
+        <div ng-if="!tag" layout="horizontal" layout-fill layout-padding layout-align="space-between" ng-if="!loading">
             <a md-button class="md-raised md-primary" ng-if="nextOffset != limit" href="/blog/page/{{backOffset}}/{{limit}}">
                 <md-button class="md-raised md-primary">cargar menos</md-button>
             </a>
             <div></div>
             <a md-button class="md-raised md-primary" ng-if="!readedall" href="/blog/page/{{nextOffset}}/{{limit}}">
+                <md-button class="md-raised md-primary">{{lang.translate.BLOG.LOADMORE}}</md-button>
+            </a>
+        </div>
+        <div ng-if="tag" layout="horizontal" layout-fill layout-padding layout-align="space-between" ng-if="!loading">
+            <a md-button class="md-raised md-primary" ng-if="nextOffset != limit" href="/blog/tag/{{tag}}/{{backOffset}}/{{limit}}">
+                <md-button class="md-raised md-primary">cargar menos</md-button>
+            </a>
+            <div></div>
+            <a md-button class="md-raised md-primary" ng-if="!readedall" href="/blog/tag/{{tag}}/{{nextOffset}}/{{limit}}">
                 <md-button class="md-raised md-primary">{{lang.translate.BLOG.LOADMORE}}</md-button>
             </a>
         </div>

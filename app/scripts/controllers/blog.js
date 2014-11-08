@@ -11,16 +11,18 @@ angular.module('eduardomarinFsApp')
     $scope.nextOffset = 0;
     $scope.readedAll = false;
     $scope.loading = false;
+    $scope.tag = $routeParams.tag;
     $scope.lang = Lang;
 
-    function _LoadPosts( p_offset, p_limit ){
+    function _LoadPosts( p_tag, p_offset, p_limit ){
 
         var _offset = parseInt(p_offset) || $scope.offset,
             _limit = parseInt(p_limit) || $scope.limit,
+            _tag = p_tag || null,
             _NextLimit;
 
         $scope.loading = true;
-        Post.get({ cursor: _offset, numPosts: _limit, published : true }, function(data) {
+        Post.get({ tag : _tag, cursor: _offset, numPosts: _limit, published : true }, function(data) {
        		
             $scope.posts = $scope.posts.concat(data.data);
             
@@ -98,11 +100,18 @@ angular.module('eduardomarinFsApp')
 
     }
 
-    if($routeParams.offset && $routeParams.limit){
-        _LoadPosts($routeParams.offset, $routeParams.limit);
+    if($routeParams.tag){
+        if($routeParams.offset && $routeParams.limit){
+            _LoadPosts($routeParams.tag, $routeParams.offset, $routeParams.limit);
+        }else{
+            _LoadPosts($routeParams.tag);
+        }
     }else{
-        _LoadPosts();
+        if($routeParams.offset && $routeParams.limit){
+            _LoadPosts(null, $routeParams.offset, $routeParams.limit);
+        }else{
+            _LoadPosts();
+        }
     }
-    
 
   });

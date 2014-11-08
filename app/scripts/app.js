@@ -28,6 +28,14 @@ angular.module('eduardomarinFsApp', [
       templateUrl: 'partials/blog',
       controller: 'BlogCtrl'
     })
+    .when('/blog/tag/:tag', {
+      templateUrl: 'partials/blog',
+      controller: 'BlogCtrl'
+    })
+    .when('/blog/tag/:tag/:offset/:limit', {
+      templateUrl: 'partials/blog',
+      controller: 'BlogCtrl'
+    })
     .when('/blog/page/:offset/:limit', {
       templateUrl: 'partials/blog',
       controller: 'BlogCtrl'

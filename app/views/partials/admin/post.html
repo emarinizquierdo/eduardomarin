@@ -4,53 +4,33 @@
         <!-- Main -->
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
-                    <!-- Left column -->
-                    <a href="/admin">
-                        <strong><i class="glyphicon glyphicon-dashboard"></i> {{lang.translate.COMMON.DASHBOARD}}</strong>
-                    </a>
-
-                    <hr>
-
-                    <ul class="list-unstyled">
-                        <li class="nav-header">
-                            <ul class="list-unstyled collapse in" id="userMenu">
-                                <li><a href="/admin/posts"><i class="glyphicon glyphicon-pencil"></i> {{lang.translate.COMMON.POSTS}} <span class="badge badge-info">4</span></a>
-                                </li>
-                                <li><a href="/admin/comments"><i class="glyphicon glyphicon-comment"></i> {{lang.translate.COMMON.COMMENTS}}</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                    <hr>
-                </div>
+                <div admin-left-menu></div>
                 <!-- /col-3 -->
                 <div class="col-md-10">
+                    <md-card layout-padding>
+                        <!-- column 2 -->
 
-                    <!-- column 2 -->
+                        <div class="padding-15">
+                            <h3>{{lang.translate.COMMON.EDITPOST}}</h3>
+                        </div>
 
-                    <a href="#">
-                        <strong><i class="glyphicon glyphicon-dashboard"></i> {{lang.translate.COMMON.MYDASHBOARD}}</strong>
-                    </a>
+                        <div class="row">
+                            <div class="col-md-12">
 
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="panel-title">
-                                        <i class="glyphicon glyphicon-wrench pull-right"></i>
-                                        <h4>{{lang.translate.COMMON.EDITPOST}}</h4>
-                                    </div>
-                                </div>
                                 <div class="panel-body">
 
                                     <form class="form form-vertical" ng-submit="savePost(postData)">
-                                        <md-switch ng-model="postData.published" aria-label="Switch 2" ng-true-value="'Si'" ng-false-value="'No'">
-                                            Publicado: {{ postData.published }}
-                                        </md-switch>
+                                        <div class="control-group">
+                                            <label></label>
+                                            <div class="controls">
+                                                <md-button class="md-raised md-primary" type="submit">{{lang.translate.COMMON.SAVE}}</md-button>
+                                            </div>
+                                        </div>
+                                        <div layout="horizontal" layout-align="start center">
+                                            <label>{{lang.translate.COMMON.PUBLISHED}}:</label>
+                                            <md-checkbox ng-model="postData.published" aria-label="Switch 2">
+                                            </md-checkbox>
+                                        </div>
                                         <div class="control-group">
                                             <label>{{lang.translate.COMMON.TITLE}}</label>
                                             <div class="controls">
@@ -92,23 +72,18 @@
                                         <div class="control-group">
                                             <label></label>
                                             <div class="controls">
-                                                <button type="submit" class="btn btn-primary">
-                                                    {{lang.translate.COMMON.SAVE}}
-                                                </button>
+                                                <md-button class="md-raised md-primary" type="submit">{{lang.translate.COMMON.SAVE}}</md-button>
                                             </div>
                                         </div>
 
                                     </form>
 
-
                                 </div>
-                                <!--/panel content-->
+                                <!--/panel-->
                             </div>
-                            <!--/panel-->
                         </div>
-                    </div>
 
-
+                    </md-card>
                 </div>
             </div>
         </div>

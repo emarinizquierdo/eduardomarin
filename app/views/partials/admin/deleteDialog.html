@@ -1,0 +1,14 @@
+<head/><md-dialog aria-label="Suspect app">
+  <md-content>
+    <h2>{{lang.translate.COMMON.ATENTION}}</h2>
+    <p>{{lang.translate.COMMON.SURE_DELETE}}</p>
+  </md-content>
+  <div class="md-actions" layout="horizontal" layout-align="end">
+    <md-button ng-click="hide()">
+      {{lang.translate.COMMON.DELETE}}
+    </md-button>
+    <md-button class="md-primary" ng-click="cancel()">
+      {{lang.translate.COMMON.CANCEL}}
+    </md-button>
+  </div>
+</md-dialog>

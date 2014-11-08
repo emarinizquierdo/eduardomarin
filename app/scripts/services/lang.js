@@ -54,6 +54,7 @@ angular.module('eduardomarinFsApp')
 				, "COMMENTS" : "Comentarios"
 				, "MAIN_IMAGE" : "Imagen de portada"
 				, "TAGS" : "Tags"
+				, "PUBLISHED" : "Publicada"
 				, "MYDASHBOARD" : "Mi escritorio"
 				, "EDITPOST" : "Editar entrada"
 				, "NEWPOST" : "Nueva entrada"
@@ -62,6 +63,10 @@ angular.module('eduardomarinFsApp')
 				, "CONTENT" : "Contenido"
 				, "SUBMIT" : "Publicar"
 				, "SAVE" : "Guardar"
+				, "ATENTION" : "Atención"
+				, "SURE_DELETE" : "¿Estás seguro que deseas eliminar esa entrada?"
+				, "DELETE" : "Eliminar"
+				, "CANCEL" : "Cancelar"
 			}
 			,
 			"PROFILE" : {
@@ -144,6 +149,7 @@ angular.module('eduardomarinFsApp')
 				, "COMMENTS" : "Comments"
 				, "MAIN_IMAGE" : "Main Image"
 				, "TAGS" : "Tags"
+				, "PUBLISHED": "Published"
 				, "MYDASHBOARD" : "My Dashboard"
 				, "EDITPOST" : "Edit post"
 				, "NEWPOST" : "New post"
@@ -152,6 +158,10 @@ angular.module('eduardomarinFsApp')
 				, "CONTENT" : "Content"
 				, "SUBMIT" : "Submit"
 				, "SAVE" : "Save"
+				, "ATENTION" : "Atention"
+				, "SURE_DELETE" : "Are you sure you want to delete this entry?"
+				, "DELETE" : "Delete"
+				, "CANCEL" : "Cancel"
 			},
 			"PROFILE" : {
 				"MAIN" : {
