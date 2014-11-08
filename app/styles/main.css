@@ -51,10 +51,10 @@ body {
     padding: 0;
 }
 .margin-15 {
-  margin: 7px 15px;
+    margin: 7px 15px;
 }
 .margin-30 {
-  margin: 15px 30px;
+    margin: 15px 30px;
 }
 .padding-15 {
     padding: 15px;
@@ -379,12 +379,12 @@ body {
     margin-top: 70px;
 }
 .tags-whiteframe {
-  background-color: #F44336;
-  color: #ffffff;
+    background-color: #F44336;
+    color: #ffffff;
 }
 .delete-tag {
-  font-size: 22px;
-  color: #ffffff;
+    font-size: 22px;
+    color: #ffffff;
 }
 .posts-container {
     max-width: 1278px;
@@ -464,13 +464,13 @@ body {
     padding: 15px;
 }
 .post-preview-footer .tags {
-  text-align: right;
+    text-align: right;
     font-size: 10px;
     overflow: hidden;
     margin-left: 10px;
 }
 .post-preview-footer .tags .tag {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 .posts-container .panel-thumbnail h3 a {
     color: #CCC;
@@ -511,7 +511,7 @@ md-content {
     background-color: #EAEAEA!important;
 }
 md-progress-circular.md-default-theme .md-inset {
-  background-color: #EAEAEA;
+    background-color: #EAEAEA;
 }
 .blog-body md-card {
     padding: 0;
@@ -534,6 +534,12 @@ md-card {
 }
 /* Small devices (tablets, 768px and up) */
 
+@media (max-width: 500px) {
+    .main-title.to-down {
+        font-size: 19px;
+        margin-left: 87px;
+    }
+}
 @media (max-width: 767px) {
     .main-title, .main-title.to-up {
         font-size: 24px;
