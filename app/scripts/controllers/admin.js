@@ -30,7 +30,7 @@ angular.module('eduardomarinFsApp')
 
   	$scope.savePost = function(p_data){
 
-        p_data.tags = (p_data.stringTags == "") ? [] : p_data.stringTags.split(",");
+        p_data.tags = (!p_data.stringTags || p_data.stringTags == "") ? [] : p_data.stringTags.split(",");
         for(var _i=0; _i < p_data.tags.length; _i++){
             p_data.tags[_i] = p_data.tags[_i].trim().replace(/ /g, "-");
         }
