@@ -76,7 +76,7 @@ angular.module('eduardomarinFsApp')
     }
 
     function _OnAutoSaveSuccess( p_data ) {
-            $routeParams.id = p_data._id;
+            $routeParams.id = p_data.permalink;
             $scope.postData._id = p_data._id
         }
 
