@@ -82,7 +82,5 @@ angular.module('eduardomarinFsApp')
         $scope.randomColor = _prettyColors[Math.floor(Math.random() * _prettyColors.length + 1)];
 
         _LoadPost();
-
-       
-stButtons.makeButtons();
+        stButtons.makeButtons();
     });

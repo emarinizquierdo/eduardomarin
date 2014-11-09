@@ -26,18 +26,19 @@
                                                 <th>{{lang.translate.COMMON.DATE}}</th>
                                                 <th></th>
                                                 <th></th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="post in posts">
-                                                <td><a href ng-click="goTo('/blog/entry/' + post._id)">{{post.title}}</a>
+                                                <td><a href="/blog/entry/{{post.permalink}}">{{post.title}}</a>
                                                 </td>
                                                 <td>{{post.date | date}}</td>
                                                 <td>
                                                     <span ng-if="post.published" class="glyphicon glyphicon-ok"></span>
                                                 </td>
                                                 <td>
-                                                    <a href ng-click="goTo('/admin/post/' + post._id)" class="glyphicon glyphicon-pencil"></a>
+                                                    <a href="/admin/post/{{post.permalink}}" class="glyphicon glyphicon-pencil"></a>
                                                 </td>
                                                 <td>
                                                     <a href ng-click="dialogBasic($event, post._id)" class="glyphicon glyphicon-trash color-red"></a>

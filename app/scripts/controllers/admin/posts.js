@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('eduardomarinFsApp')
-    .controller('AdminPostsCtrl', function($rootScope, $scope, $location, $http, $mdDialog, Auth, Post, Lang) {
+    .controller('AdminPostsCtrl', ['$rootScope', '$scope', '$location', '$http', '$mdDialog', 'Auth', 'Post', 'Lang', function($rootScope, $scope, $location, $http, $mdDialog, Auth, Post, Lang) {
 
         $scope.posts = [];
         $scope.postData = null;
@@ -36,16 +36,13 @@ angular.module('eduardomarinFsApp')
             Post.delete({
                 id: p_id
             }, function(data) {
-
+                $scope.posts = [];
+                $scope.offset = 0;
                 _LoadPost();
 
             }, function(error) {
 
             });
-        }
-
-        $scope.goTo = function(p_hash) {
-            $location.path(p_hash);
         }
 
         $scope.loadMore = function() {
@@ -58,30 +55,26 @@ angular.module('eduardomarinFsApp')
             $mdDialog.show({
                 templateUrl: 'partials/admin/deleteDialog.html',
                 targetEvent: ev,
-                controller: DialogController
+                controller: ['$scope', '$mdDialog', 'Lang', function($scope, $mdDialog, Lang) {
+                    $scope.lang = Lang;
+
+                    $scope.hide = function() {
+                        $mdDialog.hide();
+                    };
+
+                    $scope.cancel = function() {
+                        $mdDialog.cancel();
+                    };
+
+                    $scope.answer = function(answer) {
+                        $mdDialog.hide(answer);
+                    };
+                }]
             }).then(function() {
                 $scope.DeletePost(p_id);
-            }, function() {
-            });
+            }, function() {});
         };
-
-        function DialogController($scope, $mdDialog, Lang) {
-
-            $scope.lang = Lang;
-
-            $scope.hide = function() {
-                $mdDialog.hide();
-            };
-
-            $scope.cancel = function() {
-                $mdDialog.cancel();
-            };
-
-            $scope.answer = function(answer) {
-                $mdDialog.hide(answer);
-            };
-        }
 
         _LoadPost();
 
-    });
+    }]);

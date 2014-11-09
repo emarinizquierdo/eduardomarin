@@ -62,6 +62,28 @@ body {
 .padding-30 {
     padding: 30px;
 }
+.sharing-buttons {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    cursor: pointer;
+}
+.sharing-buttons.facebook {
+    background-image: url('/images/facebook_32.png');
+}
+.sharing-buttons.twitter {
+    background-image: url('/images/twitter_32.png');
+}
+.sharing-buttons.googleplus {
+    background-image: url('/images/googleplus_32.png');
+}
+.sharing-buttons.linkedin {
+    background-image: url('/images/linkedin_32.png');
+}
+.sharing-buttons.pinterest {
+    background-image: url('/images/pinterest_32.png');
+}
 /* Colors */
 
 .red {
@@ -511,7 +533,12 @@ md-content {
     background-color: #EAEAEA!important;
 }
 md-progress-circular.md-default-theme .md-inset {
-    background-color: #EAEAEA;
+    background-color: #EAEAEA!important;
+}
+md-toast.md-default-theme {
+    background-color: #323232;
+    color: white;
+    z-index: 9999;
 }
 .blog-body md-card {
     padding: 0;

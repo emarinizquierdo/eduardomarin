@@ -4,14 +4,11 @@
 
         <div flex layout-fill class="panel-thumbnail image-post-wrapper">
 
-            <a href="/blog/entry/{{postData._id}}" ng-if="postData.mainImg">
-                <img ng-src="{{postData.mainImg}}" class="image-post img-responsive">
-            </a>
+            <img ng-src="{{postData.mainImg}}" class="image-post img-responsive">
 
             <div layout="horizontal" layout-fill layout-align="center center" ng-if="!postData.mainImg" class="no-image-post" ng-style="{ 'background-color' : randomColor.background }">
 
-                <h1><a href="/blog/entry/{{postData._id}}" ng-style="{ 'color' : randomColor.color }">{{postData.title}}</a>
-                </h1>
+                <h1>{{postData.title}}</h1>
 
             </div>
 

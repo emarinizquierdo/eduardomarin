@@ -8,10 +8,10 @@
             <md-item ng-repeat="item in menu" class="pointer" ng-class="{'active' : activeTarget == item.target}" ng-click="goTo(item.path); setActive(item.target); closeSidebar();">
                 <md-item-content>
                     <div class="md-tile-content" ng-if="!item.inmain">
-                        {{item.name}}
+                        <a href="{{item.path}}">{{item.name}}</a>
                     </div>
                     <div class="md-tile-content" ng-if="item.inmain" scroll-on-click sc-target="{{item.target}}">
-                        {{item.name}}
+                        <a href >{{item.name}}</a>
                     </div>
                 </md-item-content>
                 <md-divider></md-divider>
