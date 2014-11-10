@@ -64,7 +64,7 @@
                                         <div class="control-group">
                                             <label>{{lang.translate.COMMON.CONTENT}}</label>
                                             <div class="controls">
-                                                <div text-angular ng-model="postData.body"></div>
+                                                <div ta-unsafe-sanitizer="true" text-angular ng-model="postData.body"></div>
 
                                             </div>
                                         </div>
