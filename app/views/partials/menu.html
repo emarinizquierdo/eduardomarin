@@ -16,26 +16,30 @@
                 </md-item-content>
                 <md-divider></md-divider>
             </md-item>
-            <md-item>
+            <md-item ng-if="!$root.isAdmin">
                 <md-item-content>
-                    <div class="md-tile-content dropdown">
-                        <a class="login-icon dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-                            <i class="glyphicon glyphicon-lock"></i>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
-                            <li ng-if="isAdmin" role="presentation" ng-click="closeSidebar();"><a role="menuitem" tabindex="-1" href="/admin">{{lang.translate.MENU.ADMIN}}</a>
-                            </li>
-                            <li ng-if="isAdmin" role="presentation" class="divider"></li>
-                            <li ng-if="isAdmin" role="presentation" ng-click="logout(); closeSidebar();"><a href role="menuitem" tabindex="-1">{{lang.translate.MENU.LOGOUT}}</a>
-                            </li>
-                            <li ng-if="!isAdmin" role="presentation" ng-click="closeSidebar();"><a href="/login" role="menuitem" tabindex="-1">{{lang.translate.MENU.LOGIN}}</a>
-                            </li>
-                        </ul>
+                    <div class="md-tile-content">
+                        <a href="/login">{{lang.translate.MENU.LOGIN}}</a>
                     </div>
                 </md-item-content>
+                <md-divider></md-divider>
             </md-item>
-
+            <md-item ng-if="$root.isAdmin">
+                <md-item-content>
+                    <div class="md-tile-content">
+                        <a href="/admin">{{lang.translate.MENU.ADMIN}}</a>
+                    </div>
+                </md-item-content>
+                <md-divider></md-divider>
+            </md-item>
+            <md-item ng-if="$root.isAdmin">
+                <md-item-content>
+                    <div class="md-tile-content">
+                        <a href ng-click="logout()">{{lang.translate.MENU.LOGOUT}}</a>
+                    </div>
+                </md-item-content>
+                <md-divider></md-divider>
+            </md-item>
             <md-item ng-click="closeSidebar();">
                 <md-item-content>
                     <div class="md-tile-content">

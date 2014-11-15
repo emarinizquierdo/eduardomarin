@@ -21,7 +21,7 @@ angular.module('eduardomarinFsApp')
         });
     }
 
-    $scope.savePost = function(p_data){
+    $scope.saveProfile = function(p_data){
 
     	p_data.lang = Lang.activeLang;
         UserProfile.update(p_data, _OnSuccess, _OnError);        
